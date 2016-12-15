@@ -1,0 +1,15 @@
+{
+  "name": "womans-place",
+  "version": "1.0.0",
+  "description": "Site re-design for Woman's Place",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sean Birdsall",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

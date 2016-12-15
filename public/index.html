@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="awp">
+  <head>
+    <title>AWP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="/js/module.awp.js"></script>
+    <script src="/js/controller.main.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body ng-controller="mainController as main">
+    <div class="top-bar">Crisis Line: 970-356-4226</div>
+    <img src="resources/awp.png" alt="A woman's place banner" class="banner">
+    <nav>
+      <ul class="nav-list">
+        <a class="nav-link" href="#/"><li>Home</li></a>
+        <a class="nav-link" href="#/about"><li>About AWP</li></a>
+        <a class="nav-link" href="#/getInvolved"><li>Get Involved</li></a>
+        <a class="nav-link" href="#/getHelp"><li>Get Help</li></a>
+        <a class="nav-link" href="#/services"><li>Services</li></a>
+      </ul>
+    </nav>
+    <ng-view>
+    
+    </ng-view>
+  </body>
+</html>
