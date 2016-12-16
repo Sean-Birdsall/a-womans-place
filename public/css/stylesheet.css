@@ -11,15 +11,26 @@ nav {
   background-color: orange;
 }
 
+.banner {
+  width: 80%;
+  max-width: 675px;
+  margin: 10px 0 0 0;
+}
+
+.text-blue {
+  color: #508AC7;
+}
+
 .btn-danger {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.banner {
-  width: 80%;
-  max-width: 675px;
-  margin: 10px 0 0 0;
+.carousel-caption {
+  top: 10px;
+  left: 10px;
+  text-shadow: 2px 2px 4px black;
+  padding: 0;
 }
 
 .escape {
@@ -60,6 +71,10 @@ nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .top-bar {
