@@ -7,18 +7,14 @@ body {
   text-align: center;
 }
 
-nav {
-  background-color: orange;
-}
-
 .banner {
   width: 80%;
   max-width: 675px;
   margin: 10px 0 0 0;
 }
 
-.text-blue {
-  color: #508AC7;
+.blue {
+  background-color: #508AC7;
 }
 
 .btn-danger {
@@ -33,11 +29,28 @@ nav {
   padding: 0;
 }
 
+.carousel-indicators {
+  bottom: 3px;
+}
+
+.dv-lead {
+  font-size: 125%;
+}
+
+.dv-list {
+  text-align: left;
+}
+
+.dv-section {
+  padding: 10px;
+}
+
 .escape {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   position: fixed;
   right: 10%;
+  z-index: 100;
   box-shadow: -1px 5px -1px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -45,20 +58,42 @@ nav {
   font-size: 130%;
 }
 
+.font {
+  font-family: 'Domine', serif;
+}
+
+.glyphicon {
+  position: relative;
+  top: 2px;
+  padding: 0 5px;
+}
+
+.home-head {
+  color: white;
+  background-color: #954A87;
+  margin: 0;
+  padding: 15px;
+}
+
 .myFont {
   font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link {
-  font-size: 130%;
+  font-size: 135%;
   display: inline-block;
   width: 20%;
   box-sizing: border-box;
   padding: 15px;
-  margin: 0 -3px;
+  margin: 0 -3px -1px -3px;
   text-decoration: none;
   color: black;
   transition: all 1s;
+}
+
+ .nav-link:visited {
+  color: black;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -73,8 +108,44 @@ nav {
   padding: 0;
 }
 
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: #954A87;
+}
+
+.section {
+  margin: -2px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 50%;
+}
+
+.text-blue {
+  color: #508AC7;
+}
+
 .text-left {
   text-align: left;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.text-purple {
+  color: #954A87;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px black;
+}
+
+.text-white {
+  color: white;
 }
 
 .top-bar {

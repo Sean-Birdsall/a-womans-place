@@ -3,6 +3,7 @@ angular.module('awp')
 
 function mainController() {
   var main = this;
-  main.greeting = "Hello World";
+  
+  
   
 }
