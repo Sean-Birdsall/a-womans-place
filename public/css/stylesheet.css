@@ -58,6 +58,10 @@ body {
   font-size: 130%;
 }
 
+.foot-img {
+  padding: 10px;
+}
+
 .font {
   font-family: 'Domine', serif;
 }
