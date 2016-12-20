@@ -9,6 +9,9 @@ function myRouter($routeProvider){
     .when('/', {
       templateUrl: '../templates/home.html'
     })
+    .when('/about', {
+      templateUrl: '../templates/about.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
