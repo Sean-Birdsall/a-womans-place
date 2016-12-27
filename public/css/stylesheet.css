@@ -15,9 +15,9 @@ html, body {
 }
 
 .banner {
-  width: 80%;
-  max-width: 675px;
-  margin: 10px 0 0 0;
+  width: 40%;
+  float: left;
+  margin: 10px 6% 0 3%;
 }
 
 .blue {
@@ -48,6 +48,14 @@ html, body {
 
 .carousel-indicators {
   bottom: 3px;
+}
+
+.crisis {
+  margin: 5px;
+}
+
+.crisis-div {
+  padding-top: 35px;
 }
 
 .dv-lead {
@@ -96,6 +104,12 @@ html, body {
   padding: 15px;
 }
 
+.logo {
+  text-align: left;
+  height: 145px;
+  margin: 0;
+}
+
 .myFont {
   font-family: 'Montserrat', sans-serif;
 }
@@ -130,7 +144,7 @@ html, body {
 }
 
 .orange {
-  background-color: orange;
+  background-color: #fcf464;
 }
 
 .purple {
@@ -163,7 +177,7 @@ html, body {
 }
 
 .text-orange {
-  color: orange;
+  color: #fcf464;
 }
 
 .text-purple {

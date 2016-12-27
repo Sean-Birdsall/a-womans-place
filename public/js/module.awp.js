@@ -12,6 +12,18 @@ function myRouter($routeProvider){
     .when('/about', {
       templateUrl: '../templates/about.html'
     })
+    .when('/services', {
+      templateUrl: '../templates/services.html'      
+    })
+    .when('/getHelp', {
+      templateUrl: '../templates/getHelp.html'
+    })
+    .when('/giveHelp', {
+      templateUrl: '../templates/giveHelp.html'
+    })
+    .when('/dv', {
+      templateUrl: '../templates/dv.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
