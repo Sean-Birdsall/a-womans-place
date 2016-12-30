@@ -8,6 +8,7 @@ html, body {
   padding: 0;
   margin: -2px;
   text-align: center;
+  min-width: 1000px;
 }
 
 .about-img {
@@ -27,6 +28,11 @@ html, body {
 .btn-danger {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.btn-next {
+  position: relative;
+  left: 250px;
 }
 
 .car-button {
@@ -100,8 +106,14 @@ html, body {
 .home-head {
   color: white;
   background-color: #954A87;
-  margin: -2px;
+  margin: 0px;
   padding: 15px;
+  z-index: 100;
+}
+
+.inline {
+  display: inline-block;
+  margin: 10px;
 }
 
 .logo {
@@ -168,6 +180,16 @@ html, body {
   vertical-align: top;
 }
 
+.serve-head {
+  position: absolute;
+  top: 250px;
+  border-radius: 15px;
+  background-color: rgba(149, 74, 135, 0.7);
+  text-align: left;
+  margin: 50px;
+  padding: 15px;
+}
+
 .text-blue {
   color: #508AC7;
 }
@@ -205,4 +227,12 @@ html, body {
 .top-services {
   text-align: left;
   padding: 15px;
+}
+
+.vol-app {
+  width: 80%;
+  margin: auto;
+  border-radius: 15px;
+  border: solid 1px;
+  padding-bottom: 15px;
 }

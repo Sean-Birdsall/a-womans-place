@@ -24,6 +24,9 @@ function myRouter($routeProvider){
     .when('/dv', {
       templateUrl: '../templates/dv.html'
     })
+    .when('/volunteer', {
+      templateUrl: '../templates/volunteer.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
