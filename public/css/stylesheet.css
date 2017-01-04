@@ -13,6 +13,7 @@ html, body {
 
 .about-img {
   width: 100%;
+  margin-bottom: -2px;
 }
 
 .banner {
@@ -226,7 +227,7 @@ html, body {
 
 .top-services {
   text-align: left;
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
 }
 
 .vol-app {

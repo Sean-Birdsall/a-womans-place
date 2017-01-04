@@ -1,26 +1,26 @@
 <h1>Volunteer Application</h1>
-<form ng-submit="" class="vol-app">
+<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 1">
   <h3>- Personal Information -</h3>
   <div class="inline">
     <h5>First Name</h5>
-    <input type="text" placeholder="First"  required>
+    <input type="text" placeholder="First" ng-model="main.volData.first">
   </div>
   <div class="inline">
     <h5>Middle Name</h5>
-    <input type="text" placeholder="Middle" required>
+    <input type="text" placeholder="Middle" ng-model="main.volData.middle">
   </div>
   <div class="inline">
     <h5>Last Name</h5>
-    <input type="text" placeholder="Last" required>
+    <input type="text" placeholder="Last" ng-model="main.volData.last">
   </div>
   <br>
   <div class="inline">
     <h5>Street Address</h5>
-    <input type="text" placeholder="Address" required>
+    <input type="text" placeholder="Address" ng-model="main.volData.street">
   </div>
   <div class="inline">
     <h5>State</h5>
-    <select>
+    <select ng-model="main.volData.state">
       <option value="CO">Colorado</option>
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
@@ -76,33 +76,85 @@
   </div>
   <div class="inline">
     <h5>Zip</h5>
-    <input type="number" placeholder="Zip Code" required>
+    <input type="number" placeholder="Zip Code" ng-model="main.volData.zip">
   </div>
   <br>
   <div class="inline">
     <h5>Phone</h5>
-    <input type="tel" placeholder="Phone" required>
+    <input type="tel" placeholder="Phone" ng-model="main.volData.phone">
   </div>
   <div class="inline">
     <h5>Other Phone</h5>
-    <input type="tel" placeholder="Other Phone">
+    <input type="tel" placeholder="Other Phone" ng-model="main.volData.otherPhone">
   </div>
   <div class="inline">
     <h5>Email</h5>
-    <input type="email" placeholder="Email">
+    <input type="email" placeholder="Email" ng-model="main.volData.email">
   </div>
   <br>
   <div class="inline">
     <h5>Best Way to Contact You</h5>
-    <label for="">Phone</label><input type="radio" name="contact" value="Phone">
-    <label for="">Email</label><input type="radio" name="contact" value="Email">
+    <input type="checkbox" ng-model="main.volData.contact.phone" name="contact" value="Phone">
+    <label for="">Phone</label>
+    <input type="checkbox" ng-model="main.volData.contact.email" name="contact" value="Email">
+    <label for="">Email</label>
   </div>
   <div class="inline">
     <h5>Best Time to Contact You</h5>
-    <label for="">Morning</label><input type="radio" name="time" value="Morning">
-    <label for="">Afternoon</label><input type="radio" name="time" value="Afternoon">
-    <label for="">Evening</label><input type="radio" name="time" value="Evening">
+    <input type="checkbox" ng-model="main.volData.time.morning" name="time" value="Morning">
+    <label for="">Morning</label>
+    <input type="checkbox" ng-model="main.volData.time.afternoon" name="time" value="Afternoon">
+    <label for="">Afternoon</label>
+    <input type="checkbox" ng-model="main.volData.time.evening" name="time" value="Evening">
+    <label for="">Evening</label>
   </div>
   <br>
+  <button type="submit" class="btn btn-success btn-next">Next</button>
+</form>
+<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 2">
+  <h3>Education</h3>
+  <div class="inline">
+    <h5>Highest Level of Education Completed</h5>
+    <input type="radio" ng-model="main.volData.highestE" name="highest-ed" value="High School">
+    <label for="">High School or equivalent/GED</label>    
+    <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Some College">
+    <label for="">Some College</label>    
+    <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Associates Degree">
+    <label for="">Associates Degree</label>    
+    <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Bachelors Degree or Higher">
+    <label for="">Bachelors Degree or Higher</label>    
+  </div>
+  <br>
+  <div class="inline">
+    <h5>Major/Field of Study</h5>
+    <input type="text" ng-model="main.volData.major">
+  </div>
+  <div class="inline">
+    <h5>Date Received/Expected</h5>
+    <input type="date" ng-model="main.volData.eduExpected">
+  </div>
+  <br>
+  <div class="inline">
+    <h5>If currently enrolled in an undergraduate/graduate program, are you interested in pursuing
+        an internship through A Woman’s Place?</h5>    
+    <input type="radio" name="internship" value="Yes" ng-model="main.volData.internship">
+    <label for="">Yes</label>
+    <input type="radio" name="internship" value="No" ng-model="main.volData.internship">
+    <label for="">No</label>    
+  </div>
+  <br>
+  <div class="inline">
+    <h5>Languages Spoken</h5>
+    <input type="checkbox" ng-model="main.volData.language.english">
+    <label for="">English</label>
+    <input type="checkbox" ng-model="main.volData.language.spanish">
+    <label for="">Spanish</label>
+    <input type="checkbox" ng-model="main.volData.language.other">
+    <label for="">Other...</label>
+    <br>
+    <input type="text" placeholder="Other..." ng-model="main.other" ng-if="main.volData.language.other">
+  </div>
+  <br>
+  <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
