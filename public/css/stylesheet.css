@@ -13,6 +13,7 @@ html, body {
   margin: -2px;
   text-align: center;
 /*   min-width: 1000px; */
+  /*font-size: 12px;*/
 }
 
 .about-img {
@@ -26,9 +27,12 @@ html, body {
 }
 
 .banner {
-  width: 40%;
+  width: 30%;
   float: left;
-  margin: 10px 6% 0 3%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 10px 10% 0 10%;
 }
 
 .blue {
@@ -53,7 +57,7 @@ html, body {
   top: 10%;
   left: 0;
   margin-right: 40%;
-  text-shadow: 2px 2px 4px black;
+  /*text-shadow: 2px 2px 4px black;*/
   padding: 15px;
   right: inherit;
   bottom: inherit;
@@ -176,7 +180,7 @@ html, body {
 }
 
 .orange {
-  background-color: #fcf464;
+  background-color: #ffffcc;
 }
 
 .purple {
@@ -191,6 +195,12 @@ html, body {
   width: 50%;
   vertical-align: top;
 }
+
+.section p, .section-third p {
+    text-align: left;
+}
+
+
 
 .section-third {
   box-sizing: border-box;
@@ -219,16 +229,16 @@ html, body {
 }
 
 .text-orange {
-  color: #fcf464;
+  color: #ffffcc;
 }
 
 .text-purple {
   color: #954A87;
 }
 
-.text-shadow {
+/*.text-shadow {
   text-shadow: 1px 1px 2px black;
-}
+}*/
 
 .text-white {
   color: white;
@@ -241,11 +251,11 @@ html, body {
 .top-bar {
   background-color: #508AC7;
   color: white;
-  font-size: 150%;
+  font-size: 120%;
   text-align: left;
   box-sizing: border-box;
   padding: 10px;
-  height: 50px;
+  height: 35px;
 }
 
 .top-services {
