@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 html, body {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -14,6 +18,11 @@ html, body {
 .about-img {
   width: 100%;
   margin-bottom: -2px;
+}
+
+.back {
+  width: 100%;
+  min-height: 300px;
 }
 
 .banner {
@@ -110,6 +119,10 @@ html, body {
   cursor: pointer;
 }
 
+.help-list {
+  text-align: left;
+}
+
 .home-head {
   color: white;
   background-color: #954A87;
@@ -171,7 +184,7 @@ html, body {
 }
 
 .section {
-  margin: -2px;
+  margin: 0px -1px;
   box-sizing: border-box;
   padding: 10px 20px;
   display: inline-block;
@@ -219,6 +232,10 @@ html, body {
 
 .text-white {
   color: white;
+}
+
+.top-align {
+  vertical-align: top;
 }
 
 .top-bar {

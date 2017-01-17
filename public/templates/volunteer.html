@@ -324,3 +324,53 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
+<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 5">
+  <h3>- More Info -</h3>
+  <h5>Why are you interested in volunteering at A Woman's Place?</h5>
+  <textarea class="description"></textarea>
+  <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
+    <textarea class="description"></textarea>
+  <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
+  <input type="text">
+  <h4>- Interest -</h4>
+  <h5>Please select all that apply</h5>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="Advocacy">&nbsp;Advocacy</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="ChildrensPrograms">&nbsp;Children’s Programs (Childcare, homework help, group activities)</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="DonationFacilityManagement">&nbsp;Donation and Facility Management</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="GeneralMaintenance">&nbsp;General Maintenance(House, Yard, etc.)</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="LegalAdvocacy">&nbsp;Legal Advocacy</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="OutreachEvents">&nbsp;Outreach and Events</label>
+  <label><input type="checkbox" ng-model="main.otherInt">&nbsp;Other, please explain</label>
+  <br>
+  <textarea ng-if="main.otherInt" class="description" ng-model="main.othInt" checklist-model="main.volData.interest" checklist-value="main.othInt"></textarea>
+  <br>
+  <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
+  <button type="submit" class="btn btn-success btn-next">Next</button>
+</form>
+<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 6">
+  <h3>- Schedule -</h3>
+  <div class="inline">
+    <h5>Desired length of commitment (ex. 6 months, 1 year, ongoing, etc.)</h5>
+    <input type="text">
+  </div>
+  <div class="inline">
+    <h5>Desired time commitment per week</h5>
+    <input type="text">&nbsp;Hours
+  </div>
+  <div>
+    <h5>Please select the days you are available to help us.</h5>
+    <label><input type="checkbox">&nbsp;Sunday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Monday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Tuesday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Wednesday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Thursday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Friday&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Saturday&nbsp;</label>
+  </div>
+  <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
+  <button type="submit" class="btn btn-success btn-next">Next</button>
+</form>
+<form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 7">
+  <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
+  <button type="submit" class="btn btn-success btn-next">Next</button>
+</form>

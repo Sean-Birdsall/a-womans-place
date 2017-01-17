@@ -1,4 +1,4 @@
-angular.module('awp', ['ngRoute'])
+angular.module('awp', ['ngRoute', 'checklist-model'])
   .config(myRouter);
 
 myRouter.$inject = ['$routeProvider'];

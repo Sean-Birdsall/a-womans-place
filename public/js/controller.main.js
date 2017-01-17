@@ -10,7 +10,9 @@ function mainController() {
     
   // Blank object to store volunteer information for application
   main.volData = {};
-  main.formPage = 1;
+  main.formPage = 5;
+  
+  main.othInt = 'here';
   
 /////////////////////////////  WORK AND VOL EXP PAGE CODE  ///////////////////////////////////////////
   
