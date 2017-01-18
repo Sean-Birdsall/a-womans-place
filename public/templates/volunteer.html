@@ -19,6 +19,9 @@
     <input type="text" placeholder="Address" ng-model="main.volData.street">
   </div>
   <div class="inline">
+    <input type="text" placeholder="City" ng-model="main.volData.city">
+  </div>
+  <div class="inline">
     <h5>State</h5>
     <select ng-model="main.volData.state">
       <option value="CO">Colorado</option>
@@ -95,18 +98,18 @@
   <div class="inline">
     <h5>Best Way to Contact You</h5>
     <input type="checkbox" ng-model="main.volData.contact.phone" name="contact" value="Phone">
-    <label for="">Phone</label>
+    <label for="">&nbsp;Phone&nbsp;</label>
     <input type="checkbox" ng-model="main.volData.contact.email" name="contact" value="Email">
-    <label for="">Email</label>
+    <label for="">&nbsp;Email&nbsp;</label>
   </div>
   <div class="inline">
     <h5>Best Time to Contact You</h5>
     <input type="checkbox" ng-model="main.volData.time.morning" name="time" value="Morning">
-    <label for="">Morning</label>
+    <label for="">&nbsp;Morning&nbsp;</label>
     <input type="checkbox" ng-model="main.volData.time.afternoon" name="time" value="Afternoon">
-    <label for="">Afternoon</label>
+    <label for="">&nbsp;Afternoon&nbsp;</label>
     <input type="checkbox" ng-model="main.volData.time.evening" name="time" value="Evening">
-    <label for="">Evening</label>
+    <label for="">&nbsp;Evening&nbsp;</label>
   </div>
   <br>
   <button type="submit" class="btn btn-success btn-next">Next</button>
@@ -116,13 +119,13 @@
   <div class="inline">
     <h5>Highest Level of Education Completed</h5>
     <input type="radio" ng-model="main.volData.highestE" name="highest-ed" value="High School">
-    <label for="">High School or equivalent/GED</label>    
+    <label for="">&nbsp;High School or equivalent/GED&nbsp;</label>
     <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Some College">
-    <label for="">Some College</label>    
+    <label for="">&nbsp;Some College&nbsp;</label>
     <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Associates Degree">
-    <label for="">Associates Degree</label>    
+    <label for="">&nbsp;Associates Degree&nbsp;</label>
     <input type="radio" ng-model="main.volData.highestEd" name="highest-ed" value="Bachelors Degree or Higher">
-    <label for="">Bachelors Degree or Higher</label>    
+    <label for="">&nbsp;Bachelors Degree or Higher&nbsp;</label>
   </div>
   <br>
   <div class="inline">
@@ -136,11 +139,11 @@
   <br>
   <div class="inline">
     <h5>If currently enrolled in an undergraduate/graduate program, are you interested in pursuing
-        an internship through A Woman’s Place?</h5>    
+        an internship through A Woman’s Place?</h5>
     <input type="radio" name="internship" value="Yes" ng-model="main.volData.internship">
     <label for="">Yes</label>
     <input type="radio" name="internship" value="No" ng-model="main.volData.internship">
-    <label for="">No</label>    
+    <label for="">No</label>
   </div>
   <br>
   <div class="inline">
@@ -295,7 +298,7 @@
      <textarea class="description" ng-model="work.description"></textarea>
    </div>
   </div>
-  <div ng-if="main.moreWork < 2">  
+  <div ng-if="main.moreWork < 2">
     <h5 ng-click="main.addMoreWork()">Add another</h5>
   </div>
   <h4>Volunteer Experience</h4>
@@ -318,7 +321,7 @@
      <textarea class="description" ng-model="vol.description"></textarea>
    </div>
   </div>
-  <div ng-if="main.moreVol < 2">  
+  <div ng-if="main.moreVol < 2">
     <h5 ng-click="main.addMoreVol()">Add another</h5>
   </div>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
@@ -329,17 +332,17 @@
   <h5>Why are you interested in volunteering at A Woman's Place?</h5>
   <textarea class="description"></textarea>
   <h5>What do you like (or anticipate liking) the most about volunteering? What do you like least?</h5>
-    <textarea class="description"></textarea>
+  <textarea class="description"></textarea>
   <h5>How did you hear about volunteer opportunities at A Woman’s Place?</h5>
   <input type="text">
   <h4>- Interest -</h4>
   <h5>Please select all that apply</h5>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="Advocacy">&nbsp;Advocacy</label>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="ChildrensPrograms">&nbsp;Children’s Programs (Childcare, homework help, group activities)</label>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="DonationFacilityManagement">&nbsp;Donation and Facility Management</label>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="GeneralMaintenance">&nbsp;General Maintenance(House, Yard, etc.)</label>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="LegalAdvocacy">&nbsp;Legal Advocacy</label>
-  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="OutreachEvents">&nbsp;Outreach and Events</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="Advocacy">&nbsp;Advocacy&nbsp;</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="ChildrensPrograms">&nbsp;Children’s Programs (Childcare, homework help, group activities)&nbsp;</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="DonationFacilityManagement">&nbsp;Donation and Facility Management&nbsp;</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="GeneralMaintenance">&nbsp;General Maintenance(House, Yard, etc.)&nbsp;</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="LegalAdvocacy">&nbsp;Legal Advocacy&nbsp;</label>
+  <label><input type="checkbox" checklist-model="main.volData.interest" checklist-value="OutreachEvents">&nbsp;Outreach and Events&nbsp;</label>
   <label><input type="checkbox" ng-model="main.otherInt">&nbsp;Other, please explain</label>
   <br>
   <textarea ng-if="main.otherInt" class="description" ng-model="main.othInt" checklist-model="main.volData.interest" checklist-value="main.othInt"></textarea>
@@ -354,11 +357,11 @@
     <input type="text">
   </div>
   <div class="inline">
-    <h5>Desired time commitment per week</h5>
+    <h5>Desired time commitment per week:</h5>
     <input type="text">&nbsp;Hours
   </div>
   <div>
-    <h5>Please select the days you are available to help us.</h5>
+    <h5>Please select the days you are available to help us:</h5>
     <label><input type="checkbox">&nbsp;Sunday&nbsp;</label>
     <label><input type="checkbox">&nbsp;Monday&nbsp;</label>
     <label><input type="checkbox">&nbsp;Tuesday&nbsp;</label>
@@ -367,10 +370,48 @@
     <label><input type="checkbox">&nbsp;Friday&nbsp;</label>
     <label><input type="checkbox">&nbsp;Saturday&nbsp;</label>
   </div>
+  <div>
+    <h5>Time of day that works best for you:</h5>
+    <h6>(We would like volunteers in the house from 7am until 10pm)</h6>
+    <label><input type="checkbox">&nbsp;Mornings&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Afternoons&nbsp;</label>
+    <label><input type="checkbox">&nbsp;Evenings&nbsp;</label>
+  </div>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Next</button>
 </form>
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 7">
+  <h3>- Additional Questions -</h3>
+  <div>
+    <h5>Have you ever been convicted of or charged with a crime?</h5>
+      <label><input type="radio" ng-model="main.volData.crime" value="yes">&nbsp;Yes&nbsp;</label>
+      <label><input type="radio" ng-model="main.volData.crime" value="no">&nbsp;No&nbsp;</label>
+  </div>
+  <div ng-if="main.volData.crime == 'yes'">
+    <h5>If yes, please explain:</h5>
+    <textarea class="description" rows="8" cols="40"></textarea>
+  </div>
+  <div class="">
+    <h5>
+      A Woman’s Place volunteers/interns/staff are asked to do light housekeeping in order to
+      maintain a clean and welcoming environment. We ask that volunteers and interns please
+      inform us of any work-related restrictions so that we do not assign a task that would be
+      difficult or possibly harmful to the individual. Restrictions do not have any effect on
+      acquiring a placement at A Woman’s Place.  Please use the space below to identify any
+      possible restrictions.
+    </h5>
+    <textarea class="description" rows="8" cols="40"></textarea>
+  </div>
+  <div class="">
+    <h5>
+      Thank you for your interest in volunteer opportunities with A Woman’s Place! Volunteers
+      are crucial to help us fulfill our mission, and to provide support and resources to victims
+      and survivors of domestic violence. If there is any other information you would like to
+      share, please do so in the space below. If you have any questions or concerns, feel free to
+      contact A Woman’s Place at 970-351-0476.
+    </h5>
+    <textarea class="description" rows="8" cols="40"></textarea>
+  </div>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
-  <button type="submit" class="btn btn-success btn-next">Next</button>
+  <button type="submit" class="btn btn-success btn-next">Review Application</button>
 </form>
