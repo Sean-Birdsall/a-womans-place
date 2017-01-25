@@ -9,38 +9,33 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active text-left">
-      <img src="/resources/pic2.jpg" alt="...">
+      <img src="{{ main.image_carousel[0].image }}" alt="...">
       <div class="carousel-caption text-left">
-        <h3 class="font">Help, Hope, and Healing</h3>
-        <h4>A  Woman's  Place offers a variety of services designed to protect,
-          assist and empower victims and survivors of domestic abuse, as well as,
-          raise awareness and prevention of domestic violence</h4>
+        <h3 class="font">{{ main.image_carousel[0].heading }}</h3>
+        <p class="myFont">{{ main.image_carousel[0].paragraph }}</p>
         <a href="#/getHelp"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
         <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Give Help</button></a>
       </div>
     </div>
     <div class="item">
-      <img src="/resources/pic1.jpg" alt="...">
+      <img src="{{ main.image_carousel[1].image }}">
       <div class="carousel-caption text-left">
-        <h3 class="font">Events</h3>
-        <h4>Are you passionate about helping victims of domestic violence in Weld
-          County and beyond?  Please consider co-hosting a fundraiser, donation
-          drive, or awareness event with us! Your generous partnership helps us
-          provide valuable services and advocacy to those in need. </h4>
+        <h3 class="font">{{ main.image_carousel[1].heading }}</h3>
+        <p class="myFont">{{ main.image_carousel[1].paragraph }}</p>
         <a href="#/events"><button class="btn btn-success car-button font">Upcoming Events</button></a>
       </div>
     </div>
     <div class="item">
-      <img src="/resources/pic3.jpg" alt="...">
+      <img src="{{ main.image_carousel[2].image }}" alt="...">
       <div class="carousel-caption text-left">
-        <h4>Other featured content here</h4>
+        <h3 class="font">{{ main.image_carousel[2].heading }}</h3>
+        <p class="myFont">{{ main.image_carousel[2].paragraph }}</p>
       </div>
     </div>
   </div>
 </div>
 
-<h3 class="font home-head text-shadow">A <span class="text-blue">Woman's</span> <span class="text-orange">Place</span>
-  envisions a community free of all forms of domestic violence!</h3>
+<h3 class="font home-head text-shadow">{{ main.awp.home_page_banner }}</h3>
 
 <div class="blue">
 

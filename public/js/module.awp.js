@@ -4,7 +4,7 @@ angular.module('awp', ['ngRoute', 'checklist-model'])
 myRouter.$inject = ['$routeProvider'];
 
 function myRouter($routeProvider){
-  
+
   $routeProvider
     .when('/', {
       templateUrl: '../templates/home.html'
@@ -12,8 +12,11 @@ function myRouter($routeProvider){
     .when('/about', {
       templateUrl: '../templates/about.html'
     })
+    .when('/events', {
+      templateUrl: '../templates/events.html'
+    })
     .when('/services', {
-      templateUrl: '../templates/services.html'      
+      templateUrl: '../templates/services.html'
     })
     .when('/getHelp', {
       templateUrl: '../templates/getHelp.html'
@@ -27,8 +30,14 @@ function myRouter($routeProvider){
     .when('/volunteer', {
       templateUrl: '../templates/volunteer.html'
     })
+    .when('/volunteerApp', {
+      templateUrl: '../templates/volunteerApp.html'
+    })
+    .when('/wishlist', {
+      templateUrl: '../templates/wishlist.html'
+    })
     .otherwise({
       redirectTo: '/'
     })
-  
+
 }

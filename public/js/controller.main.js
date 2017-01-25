@@ -1,8 +1,34 @@
 angular.module('awp')
   .controller('mainController', mainController);
 
-function mainController() {
+mainController.$inject = ['$http'];
+
+function mainController($http) {
   var main = this;
+
+  $http.get('/cmsdata')
+    .then(function(res){
+
+      main.awp = res.data.data;
+      main.image_carousel = res.data.data.image_carousel;
+      main.services = res.data.data.services;
+
+
+      main.rightServices = main.services.slice(Math.ceil(main.services.length/2));
+      main.leftServices = main.services.splice(0, Math.ceil(main.services.length/2));
+
+      main.aboutImages = res.data.data.about_page_images;
+      main.events = res.data.data.events;
+      main.wishlist = res.data.data.wishlist;
+      main.volPositions = res.data.data.vol_positions;
+
+
+    }, function(err){
+      if (err){
+        console.error(err);
+      }
+    })
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////  VOLUNTEER APPLICATION  ////////////////////////////////////////////////

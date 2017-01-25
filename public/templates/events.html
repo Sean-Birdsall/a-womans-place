@@ -1,0 +1,15 @@
+<img src="{{ main.awp.events_banner_image }}" alt="" class="back">
+<div class="myFont serve-head text-white">
+  <h2 class="font text-white">A Woman's Place Events</h2>
+  <p>
+   A Woman's Place offers a variety of services designed to protect, assist and empower victims and
+   survivors of domestic abuse, as well as, raise awareness and prevention of domestic violence within
+   the community!
+  </p>
+</div>
+<h3 class="home-head font">Upcoming Events</h3>
+<div ng-repeat="event in main.events">
+    <h3 class="font text-purple">{{ event.event_name }}</h3>
+  <img ng-srcset="{{ event.event_image }}" alt="" class="event-img">
+  <p class="myFont text-left">{{ event.event_description }}</p>
+</div>

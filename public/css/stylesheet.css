@@ -103,6 +103,10 @@ html, body {
   box-shadow: -1px 5px -1px 5px rgba(0, 0, 0, 0.5);
 }
 
+.event-img {
+  width: 65%;
+}
+
 .exit {
   font-size: 130%;
 }
@@ -268,4 +272,9 @@ html, body {
   border-radius: 15px;
   border: solid 1px;
   padding-bottom: 15px;
+}
+
+.wishlist {
+  width: 65%;
+  margin: auto;
 }
