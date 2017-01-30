@@ -6,6 +6,8 @@ mainController.$inject = ['$http'];
 function mainController($http) {
   var main = this;
 
+  main.ytHeight = $(window).height() / 3;
+
   // Request to back-end that makes call to CMS
   $http.get('/cmsdata')
     .then(function(res){
