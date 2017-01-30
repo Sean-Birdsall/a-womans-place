@@ -8,10 +8,22 @@
   </p>
 </div>
 <h3 class="home-head">Opportunities Include</h3>
-<div class="text-left wishlist" ng-repeat="position in main.volPositions">
-  <h3 class="font text-purple">{{ position.name }}</h3>
-  <p class="myFont">
-    {{ position.description }}
-  </p>
+<div class="top-services myFont">
+  <div class="section">
+    <div ng-repeat="position in main.leftPositions">
+      <h3 class="font text-purple">{{ position.name }}</h3>
+      <p>
+        {{ position.description }}
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div ng-repeat="position in main.rightPositions">
+      <h3 class="font text-purple">{{ position.name }}</h3>
+      <p>
+        {{ position.description }}
+      </p>
+    </div>
+  </div>
 </div>
 <a href="#/volunteerApp"><button class="btn btn-primary">Apply Online</button></a><br>

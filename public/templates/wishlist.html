@@ -1,7 +1,19 @@
 <h3 class="font home-head">What We Need</h3>
-<div class="text-left wishlist" ng-repeat="item in main.wishlist">
-  <h3 class="font text-purple">{{ item.item_name }}</h3>
-  <p class="myFont">
-    {{ item.item_description }}
-  </p>
+<div class="top-services myFont">
+  <div class="section">
+    <div ng-repeat="item in main.leftWishlist">
+      <h3 class="font text-purple">{{ item.name }}</h3>
+      <p>
+        {{ item.description }}
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div ng-repeat="item in main.rightWishlist">
+      <h3 class="font text-purple">{{ item.name }}</h3>
+      <p>
+        {{ item.description }}
+      </p>
+    </div>
+  </div>
 </div>

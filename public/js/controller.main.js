@@ -6,21 +6,28 @@ mainController.$inject = ['$http'];
 function mainController($http) {
   var main = this;
 
+  // Request to back-end that makes call to CMS
   $http.get('/cmsdata')
     .then(function(res){
 
+      // Main object of CMS response
       main.awp = res.data.data;
+      // Data used in bootstrap carousel
       main.image_carousel = res.data.data.image_carousel;
-      main.services = res.data.data.services;
-
-
-      main.rightServices = main.services.slice(Math.ceil(main.services.length/2));
-      main.leftServices = main.services.splice(0, Math.ceil(main.services.length/2));
-
+      // In order to split the 'services section' into two columns on the page
+      //we need to split it evenly into two different arrays
+      main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
+      main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
+      // Images on the about page
       main.aboutImages = res.data.data.about_page_images;
+      // Save events info into array
       main.events = res.data.data.events;
-      main.wishlist = res.data.data.wishlist;
-      main.volPositions = res.data.data.vol_positions;
+      // Split wishlist into two columns
+      main.rightWishlist = res.data.data.wishlist.slice(Math.ceil(res.data.data.wishlist.length/2));
+      main.leftWishlist = res.data.data.wishlist.splice(0, Math.ceil(res.data.data.wishlist.length/2));
+      // Split positions into two columns
+      main.rightPositions = res.data.data.vol_positions.slice(Math.ceil(res.data.data.vol_positions.length/2));
+      main.leftPositions = res.data.data.vol_positions.splice(0, Math.ceil(res.data.data.vol_positions.length/2));
 
 
     }, function(err){
