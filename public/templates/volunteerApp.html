@@ -19,62 +19,13 @@
     <input type="text" placeholder="Address" ng-model="main.volData.street">
   </div>
   <div class="inline">
+    <h5>City</h5>
     <input type="text" placeholder="City" ng-model="main.volData.city">
   </div>
   <div class="inline">
     <h5>State</h5>
     <select ng-model="main.volData.state">
-      <option value="CO">Colorado</option>
-      <option value="AL">Alabama</option>
-      <option value="AK">Alaska</option>
-      <option value="AZ">Arizona</option>
-      <option value="AR">Arkansas</option>
-      <option value="CA">California</option>
-      <option value="CT">Connecticut</option>
-      <option value="DE">Delaware</option>
-      <option value="DC">District Of Columbia</option>
-      <option value="FL">Florida</option>
-      <option value="GA">Georgia</option>
-      <option value="HI">Hawaii</option>
-      <option value="ID">Idaho</option>
-      <option value="IL">Illinois</option>
-      <option value="IN">Indiana</option>
-      <option value="IA">Iowa</option>
-      <option value="KS">Kansas</option>
-      <option value="KY">Kentucky</option>
-      <option value="LA">Louisiana</option>
-      <option value="ME">Maine</option>
-      <option value="MD">Maryland</option>
-      <option value="MA">Massachusetts</option>
-      <option value="MI">Michigan</option>
-      <option value="MN">Minnesota</option>
-      <option value="MS">Mississippi</option>
-      <option value="MO">Missouri</option>
-      <option value="MT">Montana</option>
-      <option value="NE">Nebraska</option>
-      <option value="NV">Nevada</option>
-      <option value="NH">New Hampshire</option>
-      <option value="NJ">New Jersey</option>
-      <option value="NM">New Mexico</option>
-      <option value="NY">New York</option>
-      <option value="NC">North Carolina</option>
-      <option value="ND">North Dakota</option>
-      <option value="OH">Ohio</option>
-      <option value="OK">Oklahoma</option>
-      <option value="OR">Oregon</option>
-      <option value="PA">Pennsylvania</option>
-      <option value="RI">Rhode Island</option>
-      <option value="SC">South Carolina</option>
-      <option value="SD">South Dakota</option>
-      <option value="TN">Tennessee</option>
-      <option value="TX">Texas</option>
-      <option value="UT">Utah</option>
-      <option value="VT">Vermont</option>
-      <option value="VA">Virginia</option>
-      <option value="WA">Washington</option>
-      <option value="WV">West Virginia</option>
-      <option value="WI">Wisconsin</option>
-      <option value="WY">Wyoming</option>
+      <option ng-repeat="state in main.formStates" value="state">{{ state }}</option>
     </select>
   </div>
   <div class="inline">
@@ -169,28 +120,28 @@
   </h4>
   <div class="inline">
     <h5>Name</h5>
-    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Name" ng-model="main.refOneName">
   </div>
   <div class="inline">
     <h5>Relationship to You</h5>
-    <input type="text" placeholder="Relationship">
+    <input type="text" placeholder="Relationship" ng-model="main.refOneRelationship">
   </div>
   <div class="inline">
     <h5>Phone/Contact Information</h5>
-    <input type="tel" placeholder="Phone">
+    <input type="tel" placeholder="Phone" ng-model="main.refOnePhone">
   </div>
   <br>
   <div class="inline">
     <h5>Name</h5>
-    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Name" ng-model="main.refTwoName">
   </div>
   <div class="inline">
     <h5>Relationship to You</h5>
-    <input type="text" placeholder="Relationship">
+    <input type="text" placeholder="Relationship" ng-model="main.refTwoRelationship">
   </div>
   <div class="inline">
     <h5>Phone/Contact Information</h5>
-    <input type="tel" placeholder="Phone">
+    <input type="tel" placeholder="Phone" ng-model="main.refTwoPhone">
   </div>
   <hr>
   <h3>- Emergency Contact -</h3>
@@ -208,59 +159,12 @@
     <input type="text" placeholder="Address" ng-model="main.volData.emc.street">
   </div>
   <div class="inline">
+    <input type="text" placeholder="City" ng-model="main.volData.emc.city">
+  </div>
+  <div class="inline">
     <h5>State</h5>
     <select ng-model="main.volData.emc.state">
-      <option value="CO">Colorado</option>
-      <option value="AL">Alabama</option>
-      <option value="AK">Alaska</option>
-      <option value="AZ">Arizona</option>
-      <option value="AR">Arkansas</option>
-      <option value="CA">California</option>
-      <option value="CT">Connecticut</option>
-      <option value="DE">Delaware</option>
-      <option value="DC">District Of Columbia</option>
-      <option value="FL">Florida</option>
-      <option value="GA">Georgia</option>
-      <option value="HI">Hawaii</option>
-      <option value="ID">Idaho</option>
-      <option value="IL">Illinois</option>
-      <option value="IN">Indiana</option>
-      <option value="IA">Iowa</option>
-      <option value="KS">Kansas</option>
-      <option value="KY">Kentucky</option>
-      <option value="LA">Louisiana</option>
-      <option value="ME">Maine</option>
-      <option value="MD">Maryland</option>
-      <option value="MA">Massachusetts</option>
-      <option value="MI">Michigan</option>
-      <option value="MN">Minnesota</option>
-      <option value="MS">Mississippi</option>
-      <option value="MO">Missouri</option>
-      <option value="MT">Montana</option>
-      <option value="NE">Nebraska</option>
-      <option value="NV">Nevada</option>
-      <option value="NH">New Hampshire</option>
-      <option value="NJ">New Jersey</option>
-      <option value="NM">New Mexico</option>
-      <option value="NY">New York</option>
-      <option value="NC">North Carolina</option>
-      <option value="ND">North Dakota</option>
-      <option value="OH">Ohio</option>
-      <option value="OK">Oklahoma</option>
-      <option value="OR">Oregon</option>
-      <option value="PA">Pennsylvania</option>
-      <option value="RI">Rhode Island</option>
-      <option value="SC">South Carolina</option>
-      <option value="SD">South Dakota</option>
-      <option value="TN">Tennessee</option>
-      <option value="TX">Texas</option>
-      <option value="UT">Utah</option>
-      <option value="VT">Vermont</option>
-      <option value="VA">Virginia</option>
-      <option value="WA">Washington</option>
-      <option value="WV">West Virginia</option>
-      <option value="WI">Wisconsin</option>
-      <option value="WY">Wyoming</option>
+      <option ng-repeat="state in main.formStates" value="state">{{ state }}</option>
     </select>
   </div>
   <div class="inline">
@@ -274,7 +178,7 @@
   </div>
   <br>
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
-  <button type="submit" class="btn btn-success btn-next">Next</button>
+  <button type="submit" class="btn btn-success btn-next" ng-click="main.saveRefs()">Next</button>
 </form>
 <form ng-submit="main.nextBtn();" class="vol-app" ng-if="main.formPage === 4">
   <h3>- Work and Volunteer Experience -</h3>
@@ -415,3 +319,93 @@
   <button class="btn btn-primary btn-next" ng-click="main.prevBtn()" ng-if="main.formPage > 1">Previous</button>
   <button type="submit" class="btn btn-success btn-next">Review Application</button>
 </form>
+<div ng-if="main.formPage === 8">
+    <h3>Review Application</h3>
+    <div>
+      <h4>Your Info</h4>
+      <div class="inline top-align">
+        <h5>Name</h5>
+        <label>{{ main.volData.first }} {{ main.volData.middle }} {{ main.volData.last }}</label>
+      </div>
+      <div class="inline top-align">
+        <h5>Address</h5>
+        <label>
+          {{ main.volData.street }}, {{ main.volData.city }}, {{ main.volData.state }} {{ main.volData.zip }}
+        </label>
+      </div>
+      <div class="inline top-align">
+        <h5>Phone</h5>
+        <label>
+          {{ main.volData.phone }}<br>
+          {{ main.volData.othPhone }}
+        </label>
+      </div>
+      <div class="inline top-align">
+        <h5>Email</h5>
+        <label>
+          {{ main.volData.email }}
+        </label>
+      </div>
+  </div>
+    <div class="top-align">
+      <h4>Education</h4>
+      <div class="top-align">
+        <div class="inline">
+          <h5>Highest Education</h5>
+          <label>{{ main.volData.highestEd }}</label>
+        </div>
+        <div class="inline">
+          <h5>Major</h5>
+          <label>{{ main.volData.major }}</label>
+        </div>
+        <div class="inline">
+          <h5>Date received and/or expected</h5>
+          <label>{{ main.volData.eduExpected }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="top-align">
+      <h4>Languages Spoken:</h4>
+      <label>
+        {{ main.volData.language }}
+      </label>
+    </div>
+  <div>
+    <h4>References</h4>
+    <div ng-repeat="reference in main.volData.references">
+      <div class="inline top-align">
+        <h5>Name:</h5>
+        <label>{{ reference.name }}</label>
+      </div>
+      <div class="inline top-align">
+        <h5>Relationship</h5>
+        <label>{{ reference.relationship }}</label>
+      </div>
+      <div class="inline top-align">
+        <h5>Phone</h5>
+        <label>{{ reference.phone }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="inline top-align">
+    <h4>Emergency Contact</h4>
+    <div class="inline top-align">
+      <h5>Name:</h5>
+      <label>{{ main.volData.emc.name }}</label>
+    </div>
+    <div class="inline top-align">
+      <h5>Relationship</h5>
+      <label>{{ main.volData.emc.relationship }}</label>
+    </div>
+    <div class="inline top-align">
+      <h5>Phone</h5>
+      <label>{{ main.volData.emc.phone }}</label>
+    </div>
+    <div class="inline top-align">
+      <h5>Address</h5>
+      <label>
+        {{ main.volData.emc.street }}, {{ main.volData.emc.city }}, {{ main.volData.emc.state }} {{ main.volData.emc.zip }}
+      </label>
+    </div>
+  </div>
+</div>

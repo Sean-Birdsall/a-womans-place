@@ -3,8 +3,13 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
+a:focus {
+  color: white;
+}
+
 
 html, body {
   box-sizing: border-box;
@@ -58,7 +63,7 @@ html, body {
   left: 0;
   margin-right: 40%;
   /*text-shadow: 2px 2px 4px black;*/
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
   right: inherit;
   bottom: inherit;
   background-color: rgba(149, 74, 135, 0.7);
@@ -171,14 +176,16 @@ html, body {
   text-decoration: none;
   color: black;
   transition: all 1s;
-}
-
- .nav-link:visited {
-  color: black;
-  text-decoration: none;
+  border-radius: 5px 5px 0 0;
 }
 
 .nav-link:hover {
+  color: white;
+  background-color: #954A87;
+  text-decoration: none;
+}
+
+.nav-active {
   color: white;
   background-color: #954A87;
   text-decoration: none;
