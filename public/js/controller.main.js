@@ -9,7 +9,7 @@ function mainController($http, $location) {
   // Figures out which page user is on when they enter the site and selects the
   // correct navigation link
   main.activeNav;
-  switch ($location.$$absUrl.slice(22)){
+  switch ($location.$$absUrl.slice(17)){
     case '#/':
       main.activeNav = 1;
       break;
@@ -23,6 +23,9 @@ function mainController($http, $location) {
       main.activeNav = 4;
       break;
     case '#/giveHelp':
+    case '#/volunteer':
+    case '#/volunteerApp':
+    case '#/wishlist':
       main.activeNav = 5;
       break;
     default:
@@ -72,51 +75,62 @@ function mainController($http, $location) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // Blank object to store volunteer information for application
-  main.volData = { "work":[{
-                      "name":"Work One",
-                      "dateFrom":"2007-09-20T06:00:00.000Z",
-                      "dateTo":"2014-12-01T07:00:00.000Z",
-                      "description":"Working at workplace one."
-                      ,"pos":0}],
-                    "vol":[{
-                      "name":"",
-                      "dateFrom":null,
-                      "dateTo":null,
-                      "description":""}],
-                    "references":[{
-                      "name":"Donald Trump",
-                      "relationship":"President",
-                      "phone":"555-555-5555"
-                      },{
-                      "name":"Obama",
-                      "relationship":"Ex-President",
-                      "phone":"555-555-2342"
-                    }],
-                    "first":"Sean",
-                    "middle":"Paul",
-                    "last":"Birdsall",
-                    "street":"1216 Marina Ct.",
-                    "city":"Lewisivlle",
-                    "state":"TX",
-                    "zip":75067,
-                    "phone":"972-510-9534",
-                    "email":"sbirdsall0312@gmail.com",
-                    "contact":{"email":true},
-                    "time":{"afternoon":true},
-                    "highestEd":"Some College",
-                    "major":"N/A","internship":
-                    "Yes","language":{"english":true},
-                    "eduExpected":null,
-                    "emc":{
-                      "name":"Debbie Birdsall",
-                      "relationship":"Mother",
-                      "street":"1216 Marina Ct.",
-                      "city":"Lewisivlle",
-                      "state":"TX","zip":75067,
-                      "phone":"214-641-8295"},
-                      "interest":[],
-                      "crime":"no"};
-  main.formPage = 8;
+  main.volData = {};
+
+  // Dummy Form Data
+  // main.volData = { "workExp":"Seven years in the Navy",
+  //                   "volExp":"Animal shelter volunteer work",
+  //                   "references":[{
+  //                     "name":"Donald Trump",
+  //                     "relationship":"President",
+  //                     "phone":"555-555-5555"
+  //                     },{
+  //                     "name":"Obama",
+  //                     "relationship":"Former President",
+  //                     "phone":"555-555-2342"
+  //                   }],
+  //                   "length":"Ongoing",
+  //                   "hours":"10",
+  //                   "why":"I want to help a cause I believe in",
+  //                   "like":"The rewarding feeling of helping people",
+  //                   "how":"RefactorU career services",
+  //                   "first":"Sean",
+  //                   "last":"Birdsall",
+  //                   "street":"1216 Marina Ct.",
+  //                   "city":"Lewisivlle",
+  //                   "state":"TX",
+  //                   "zip":75067,
+  //                   "phone":"972-510-9534",
+  //                   "email":"sbirdsall0312@gmail.com",
+  //                   "highestEd":"Some College",
+  //                   "major":"N/A",
+  //                   "languages":['English'],
+  //                   "times":['Afternoons'],
+  //                   "contactMethods":['Phone','Email'],
+  //                   "eduExpected":null,
+  //                   "days":['Saturday','Sunday'],
+  //                   "volTimes":['Mornings','Afternoons'],
+  //                   "crime":"No",
+  //                   "questions":"None",
+  //                   "restrictions":"None",
+  //                   "emc":{
+  //                     "name":"Debbie Birdsall",
+  //                     "relationship":"Mother",
+  //                     "street":"1216 Marina Ct.",
+  //                     "city":"Lewisivlle",
+  //                     "state":"TX","zip":75067,
+  //                     "phone":"214-641-8295"},
+  //                     };
+
+  main.formPage = 1;
+
+  main.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  main.times = ['Mornings', 'Afternoons', 'Evenings'];
+
+  main.contactMehtods = ['Phone', 'Email'];
+
+  main.languages = ['English', 'Spanish', 'Other...'];
 
   main.formStates = ["CO","AL","AK","AZ","AR","CA","CT","DE","DC","FL","GA","HI",
                      "ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN",
@@ -124,106 +138,12 @@ function mainController($http, $location) {
                      "OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA",
                      "WV","WI","WY"];
 
-  main.othInt = 'here';
-
-/////////////////////////////  WORK AND VOL EXP PAGE CODE  ///////////////////////////////////////////
-
-  // Initialize Variables
-  main.moreWork = 0;
-  main.moreVol = 0;
-  // main.volData.references = [];
-
-  function Reference(name, relationship, phone){
-    this.name = name,
-    this.relationship = relationship,
-    this.phone = phone;
-  }
-
-  main.saveRefs = function(){
-    main.volData.references.push(new Reference(main.refOneName, main.refOneRelationship,
-      main.refOnePhone));
-      main.volData.references.push(new Reference(main.refTwoName, main.refTwoRelationship,
-        main.refTwoPhone));
-  }
-
-  // One work object is hardcoded into the array so it shows the user the inputs for one work experience
-  main.volData.work = [{
-    name: '',
-    dateFrom: '',
-    dateTo: '',
-    description: '',
-    pos: 0,
-  }]
-
-  // Same for this one except for volunteer experience
-  main.volData.vol = [{
-    name: '',
-    dateFrom: '',
-    dateTo: '',
-    description: '',
-  }]
-
-  // Function for when the user add more than one work experience
-  main.addMoreWork = function() {
-    // This IF statement limits the amount of work experience the user can add to three
-    if (main.moreWork < 2){
-
-      main.volData.work.push({
-      name: '',
-      dateFrom: '',
-      dateTo: '',
-      description: '',
-    })
-
-    main.moreWork++;
-    }
-  }
-
-  main.removeWork = function($event){
-    var workToDelete = $event.currentTarget.getAttribute('id')
-    console.log(main.volData.work);
-    console.log(workToDelete);
-
-        if(main.volData.work.length > 1){
-          main.volData.work.splice(workToDelete, 1);
-          main.moreWork--;
-        }
-    }
-
-
-  main.addMoreVol = function() {
-    // This IF statement limits the amount of work experience the user can add to three
-    if (main.moreVol < 2){
-      main.moreVol++;
-
-      main.volData.vol.push({
-      name: '',
-      dateFrom: '',
-      dateTo: '',
-      description: ''
-    })
-    }
-  }
-
-  main.removeVol = function($event){
-    var volToDelete = $event.currentTarget.getAttribute('id')
-    console.log(main.volData.vol);
-    console.log(volToDelete);
-
-        if(main.volData.vol.length > 1){
-          main.volData.vol.splice(volToDelete, 1);
-          main.moreVol--;
-        }
-    }
-
   main.nextBtn = function(){
         main.formPage++;
-
   }
 
   main.prevBtn = function(){
     main.formPage--;
-//     console.log(main.volData);
   }
 
 }
