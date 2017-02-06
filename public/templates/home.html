@@ -1,4 +1,4 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="8000">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -14,7 +14,6 @@
         <h3 class="font">{{ main.image_carousel[0].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[0].paragraph }}</p>
         <a href="#/getHelp"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
-        <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Give Help</button></a>
       </div>
     </div>
     <div class="item">
@@ -22,8 +21,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[1].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[1].paragraph }}</p>
-        <a href="#/getHelp"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
-        <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Give Help</button></a>
+        <a href="#/learnMore"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
       </div>
     </div>
     <div class="item">
@@ -31,21 +29,20 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[2].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[2].paragraph }}</p>
-        <a href="#/getHelp"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
-        <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Give Help</button></a>
+        <a href="#/giveHelp"><button class="btn btn-primary car-button font text-shadow">Get Involved</button></a>
       </div>
     </div>
   </div>
 </div>
 
 <h3 class="font home-head text-shadow">{{ main.awp.home_page_banner }}</h3>
-
+<div style="text-align: left">
 <div class="section-third blue text-shadow text-white" style="height: {{main.ytHeight}}px; padding: 15px;">
   <h3 class="font">{{ main.homeSections[0].heading }}</h3>
   <p class="myFont">
     {{ main.homeSections[0].body }}
   </p>
-  <a href=""><button class="font dv-lead btn btn-success text-shadow">Get Help</button></a>
+  <a href="#/dv"><button class="font dv-lead btn btn-success text-shadow">Learn More</button></a>
 </div><div class="section-third yt-embed">
   <iframe width="100%" height="{{ main.ytHeight }}" src="https://www.youtube.com/embed/zG7vRZz04Xc" frameborder="0" allowfullscreen></iframe>
 </div><div class="section-third orange" style="height: {{main.ytHeight}}px; padding: 15px;">
@@ -53,9 +50,10 @@
   <p class="myFont">
     {{ main.homeSections[1].body }}
   </p>
-  <a href="#/services"><button class="font dv-lead btn btn-primary text-shadow">All Services are free and confidential!</button></a>
+  <a href="#/services"><button class="font dv-lead btn btn-primary text-shadow">Learn More</button></a>
 </div>
-<div class="dv-section">
+</div>
+<!-- <div class="dv-section">
   <h3 class="font text-purple">You can help build a world free of Domestic Violence!</h3>
   <p class="myFont">
     As a family member, friend, colleague, or acquaintance of a victim of domestic abuse, you may be the only
@@ -63,4 +61,4 @@
   </p>
   <a href="#/giveHelp"><button class="font btn btn-primary dv-lead text-shadow">Ways to Help</button></a>
   <a href="#/wishlist"><button class="font btn btn-success dv-lead text-shadow">Donate</button></a>
-</div>
+</div> -->

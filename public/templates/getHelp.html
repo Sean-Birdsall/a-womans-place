@@ -26,6 +26,27 @@
 
   </div>
 </div>
+<h2 class="text-purple font" style="border-bottom: solid 1px black">Services</h2>
+<h4 class="text-purple myFont">All resources listed here can be accessed by our residential AND non-residential clients.</h4>
+<div class="top-services myFont">
+  <div class="section">
+    <div ng-repeat="service in main.leftServices">
+      <h3 class="font text-purple">{{ service.service_name }}</h3>
+      <p>
+        {{ service.service_description }}
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div ng-repeat="service in main.rightServices">
+      <h3 class="font text-purple">{{ service.service_name }}</h3>
+      <p>
+        {{ service.service_description }}
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="text-purple font">
  <h2 class="text-shadow">Preparing to Leave</h2>
 </div>
@@ -60,6 +81,7 @@
       <li>Divorce/Custory Papers</li>
     </ul>
   </div>
+  <br>
   <div class="inline top-align myFont">
     <h4 class="text-purple">Medical:</h4>
     <ul class="help-list">

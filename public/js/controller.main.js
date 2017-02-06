@@ -16,10 +16,10 @@ function mainController($http, $location) {
     case '#/about':
       main.activeNav = 2;
       break;
-    case '#/services':
+    case '#/getHelp':
       main.activeNav = 3;
       break;
-    case '#/getHelp':
+    case '#/dv':
       main.activeNav = 4;
       break;
     case '#/giveHelp':
