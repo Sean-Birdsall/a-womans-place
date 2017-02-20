@@ -159,11 +159,11 @@ body {
 }
 
 .left-filler, .right-filler {
-  font-family: cursive;
+  font-family: 'Tangerine', cursive;
   text-align: center;
-  font-size: 34px;
+  font-size: 54px;
   position: absolute;
-  top: 300px;
+  top: 285px;
 }
 
 .right-filler span, .left-filler span {
