@@ -1,5 +1,7 @@
 #carousel-example-generic {
   text-align: center;
+  width: 70%;
+  display: inline-block;
 }
 
 #mc-embedded-subscribe-form {
@@ -22,7 +24,7 @@ a:focus {
 }
 
 html {
-  background-color: seashell;
+  /*background-color: #ffffcc;*/
   /*background-image: url();*/
 }
 
@@ -30,13 +32,13 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   padding: 0;
-  margin: auto;
+  /*margin: auto;*/
   /*border-radius: 15px;*/
   /*box-shadow: 0px 1px 10px 5px gray;*/
   /*border: solid 1px red;*/
   text-align: center;
-  min-width: 1071px;
-  max-width: 1200px;
+  /*min-width: 1071px;*/
+  /*max-width: 1200px;*/
   /*font-size: 12px;*/
 }
 
@@ -53,7 +55,7 @@ body {
 .banner {
   width: 30%;
   transform: translateY(-50%);
-  margin: 35px 10% 0 10%;
+  margin: 35px 10% 0 15%;
 }
 
 .blue {
@@ -102,6 +104,14 @@ body {
   bottom: 3px;
 }
 
+.carousel-replacement {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
 .crisis {
   margin: 5px;
 }
@@ -127,16 +137,11 @@ body {
   padding: 10px;
 }
 
-
-.email {
-
-}
-
 .escape {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   position: fixed;
-  right: 10%;
+  left: 75%;
   z-index: 100;
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
@@ -151,6 +156,27 @@ body {
 
 .fa {
   padding: 0 5px;
+}
+
+.left-filler, .right-filler {
+  font-family: cursive;
+  text-align: center;
+  font-size: 34px;
+  position: absolute;
+  top: 300px;
+}
+
+.right-filler span, .left-filler span {
+  display: inline-block;
+  width: 100px;
+}
+
+.left-filler {
+  left: 4.5%;
+}
+
+.right-filler {
+  left: 89.5%;
 }
 
 .foot-img {
@@ -176,7 +202,7 @@ body {
 .home-head {
   color: white;
   background-color: #954A87;
-  margin: 0px;
+  margin: -5px 0 0 0;
   padding: 15px;
   z-index: 100;
 }
@@ -208,6 +234,10 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .nav-link:hover {
   color: white;
   background-color: #954A87;
@@ -224,6 +254,12 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.newsletter {
+  display: inline-block;
+  color: black;
+  margin-left: 20px;
 }
 
 .orange {
@@ -251,9 +287,9 @@ body {
 
 .section-third {
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 0 4px 0;
   display: inline-block;
-  width: 33%;
+  width: 33.333%;
   vertical-align: top;
   overflow: hidden;
 }
@@ -306,7 +342,7 @@ body {
   font-size: 120%;
   text-align: left;
   box-sizing: border-box;
-  padding: 2px;
+  padding: 2px 2px 2px 35px;
   /*border-top-left-radius: 15px;
   border-top-right-radius: 15px;*/
   /*height: 40px;*/
@@ -337,4 +373,136 @@ body {
 .yt-embed {
   padding: 0;
   margin: 0;
+}
+
+.about-sec-one {
+  vertical-align: middle;
+  padding: 15px
+}
+
+@media all and (max-width: 1300px){
+  .right-filler, .left-filler {
+    display: none;
+  }
+
+  #carousel-example-generic {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1110px) {
+
+  .about-sec-one {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .exit, .exit-des {
+    display: none;
+  }
+  .escape {
+    left: 90%;
+  }
+
+  .nav-link {
+    font-size: 115%;
+    padding: 15px 5px;
+  }
+}
+
+@media all and (max-width: 927px) {
+
+  .about-img {
+    display: none;
+  }
+
+  .banner {
+    width: 35%;
+  }
+
+  .carousel-img {
+    max-height: 275px;
+    min-height: 275px;
+  }
+
+  .newsletter {
+    display: none;
+  }
+
+  .section-third {
+    display: block;
+    height: auto !important;
+    width: auto;
+  }
+
+}
+
+@media all and (max-width: 800px) {
+
+  .banner {
+    width: 45%;
+  }
+
+  .crisis-div {
+    padding-top: 0;
+  }
+
+  .logo {
+    text-align: center;
+    transform: none;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 585px){
+
+  #carousel-example-generic {
+    display: none;
+  }
+
+  .carousel-replacement {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+
+  .banner {
+    width: 65%;
+  }
+
+  .car-button-sm {
+    position: absolute;
+    left: 35px;
+    top: 50px;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .escape {
+    left: 80%;
+  }
+
+  nav {
+    text-align: left;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+    margin-left: 5%;
+    padding-left: 4%;
+  }
+
+  .nav-link {
+    width: 35%;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .section {
+    width: 100%;
+  }
 }

@@ -1,17 +1,15 @@
 <div class="section-third about-img">
   <img src="{{ main.aboutImages[0].image }}" alt="" class="about-img">
-</div>
-<div class="section-third" style="vertical-align: middle">
+</div><div class="section-third about-sec-one">
   <h2 class="font text-purple">{{ main.aboutSections[0].heading }}</h2>
   <p class="myFont">
     {{ main.aboutSections[0].body }}
   </p>
-</div>
-<div class="section-third about-img">
+</div><div class="section-third about-img">
   <img src="{{ main.aboutImages[1].image }}" alt="" class="about-img">
 </div>
 <div class="font purple text-white home-head">
-  <h3 class="text-shadow" style="font-family: 'Lustria', serif;">Board of Directors/etc can go on this page</h3>
+  <h3 class="text-shadow" style="font-family: 'Lustria', serif;">{{ main.awp.about_page_banner }}</h3>
 </div>
 
 <div class="blue">
@@ -28,5 +26,27 @@
     {{ main.aboutSections[2].body }}
   </p>
 </div>
+</div>
 
+
+<h3 class="font text-purple">Board of Directors</h3>
+<div ng-repeat="staffer in main.boardStaff" class="inline">
+
+  <h5> {{ staffer.board_position }}: {{ staffer.name }}</h5>
+
+</div>
+
+<div class="top-services myFont">
+  <div class="section">
+    <div ng-repeat="director in main.leftDirectors">
+      <h4 class="font text-purple">{{ director.name }}</h4>
+      <h5> {{ director.organization}} </h5>
+    </div>
+  </div>
+  <div class="section">
+    <div ng-repeat="director in main.rightDirectors">
+      <h4 class="font text-purple">{{ director.name }}</h4>
+      <h5> {{ director.organization }}</h5>
+    </div>
+  </div>
 </div>

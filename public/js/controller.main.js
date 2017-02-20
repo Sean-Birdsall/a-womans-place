@@ -55,6 +55,29 @@ function mainController($http, $location) {
       main.aboutImages = res.data.data.about_page_images;
       // Save events info into array
       main.events = res.data.data.events;
+
+        main.boardStaff = [];
+        main.board = [];
+
+      for (var i = 0; i < main.awp.board_of_directors.length; i++) {
+        if (res.data.data.board_of_directors[i].board_position) {
+          main.boardStaff.push(res.data.data.board_of_directors[i])
+        } 
+          main.board.push(res.data.data.board_of_directors[i]);
+
+      }
+
+
+      main.rightDirectors = main.board.slice(Math.ceil(main.board.length/2));
+      main.leftDirectors = main.board.splice(0, Math.ceil(main.board.length/2));
+
+
+
+
+
+
+      // Images on the about page
+
       // Split wishlist into two columns
       main.rightWishlist = res.data.data.wishlist.slice(Math.ceil(res.data.data.wishlist.length/2));
       main.leftWishlist = res.data.data.wishlist.splice(0, Math.ceil(res.data.data.wishlist.length/2));
