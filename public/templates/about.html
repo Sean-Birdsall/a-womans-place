@@ -1,9 +1,9 @@
 <div style="position: relative">
   <img src="{{ main.awp.events_banner_image }}" alt="" class="back">
-      <div class="serve-head serve-head-pink text-left">
+      <div class="serve-head serve-head-purple text-left text-white">
         <h3 class="font">{{ main.aboutSections[0].heading }}</h3>
         <p class="myFont">{{ main.aboutSections[0].body }}</p>
-      </div>  
+      </div>
 </div>
 
 <div class="blue">
@@ -22,9 +22,9 @@
 </div>
 </div>
 <h3 class="font text-purple">Executive Director</h3>
-<span> {{ main.awp.executive_director[0].name }}</span>
-<span> {{ main.awp.executive_director[0].phone }}</span>
-<span> {{ main.awp.executive_director[0].email }} </span>
+<h4 class="font text-purple" style="margin-bottom:0"> {{ main.awp.executive_director[0].name }}</h4>
+<h5 style="margin-top:0"> {{ main.awp.executive_director[0].phone }}<br>
+ {{ main.awp.executive_director[0].email }} </h5>
 
 <h3 class="font text-purple">Board of Directors</h3>
 <div ng-repeat="staffer in main.boardStaff" class="inline">

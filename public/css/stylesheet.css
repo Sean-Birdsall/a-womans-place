@@ -95,8 +95,8 @@ body {
 
 .carousel-img {
   width: 100%;
-  max-height: 375px;
-  min-height: 375px;
+  max-height: 350px;
+  min-height: 350px;
   overflow: hidden;
 }
 
@@ -264,6 +264,13 @@ body {
 
 .section p, .section-third p {
     text-align: left;
+}
+
+.section-get-help {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 7%;
 }
 
 

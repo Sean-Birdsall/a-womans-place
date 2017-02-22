@@ -53,6 +53,14 @@ function mainController($http, $location) {
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
       // Images on the about page
       main.aboutImages = res.data.data.about_page_images;
+
+      var prepToLeave = $('#prep-to-leave');
+      var safetyPlan = $('#safety-plan');
+
+      prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
+      safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
+      console.log(prepToLeave);
+
       // Save events info into array
       main.events = res.data.data.events;
 
@@ -62,7 +70,7 @@ function mainController($http, $location) {
       for (var i = 0; i < main.awp.board_of_directors.length; i++) {
         if (res.data.data.board_of_directors[i].board_position) {
           main.boardStaff.push(res.data.data.board_of_directors[i])
-        } 
+        }
           main.board.push(res.data.data.board_of_directors[i]);
 
       }
