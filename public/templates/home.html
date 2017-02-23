@@ -13,7 +13,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[0].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[0].paragraph }}</p>
-        <a href="#/getHelp"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
+        <a href="#/getHelp" ng-click="main.getData()"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
       </div>
     </div>
     <div class="item">
@@ -21,7 +21,7 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[1].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[1].paragraph }}</p>
-        <a href="#/learnMore"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
+        <a href="#/dv" ng-click="main.activeNav = 4"><button class="btn btn-success car-button font text-shadow">Learn More</button></a>
       </div>
     </div>
     <div class="item">
@@ -38,9 +38,9 @@
   <img src="{{ main.image_carousel[0].image }}" class="carousel-replacement">
   <a href="#/getHelp"><button class="btn btn-success car-button-sm font text-shadow">Get Help</button></a>
 </div>
-<h3 class="font home-head text-shadow">{{ main.awp.home_page_banner }}</h3>
-<div>
-<div class="section-third blue text-shadow text-white" style="height: {{main.ytHeight}}px; padding: 15px;">
+<h3 class="font home-head text-shadow" style="margin: -5px 0 0 0">{{ main.awp.home_page_banner }}</h3>
+<div style="border-radius: 0 0 15px 15px">
+<div class="section-third blue text-shadow text-white" style="height: {{main.ytHeight}}px; padding: 15px; border-radius: 0 0 0 5px">
   <h3 class="font">{{ main.homeSections[0].heading }}</h3>
   <p class="myFont">
     {{ main.homeSections[0].body }}
@@ -48,7 +48,7 @@
   <a href="#/dv"><button class="font dv-lead btn btn-success text-shadow">Learn More</button></a>
 </div><div class="section-third yt-embed">
   <iframe width="100%" height="{{ main.ytHeight }}" src="https://www.youtube.com/embed/zG7vRZz04Xc" frameborder="0" allowfullscreen></iframe>
-</div><div class="section-third orange" style="height: {{main.ytHeight}}px; padding: 15px;">
+</div><div class="section-third orange" style="height: {{main.ytHeight}}px; padding: 15px; border-radius: 0 0 5px 0">
   <h3 class="font">{{ main.homeSections[1].heading }}</h3>
   <p class="myFont">
     {{ main.homeSections[1].body }}

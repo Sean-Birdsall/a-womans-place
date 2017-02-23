@@ -54,12 +54,23 @@ function mainController($http, $location) {
       // Images on the about page
       main.aboutImages = res.data.data.about_page_images;
 
-      var prepToLeave = $('#prep-to-leave');
-      var safetyPlan = $('#safety-plan');
+      main.getData = function(){
+        setTimeout(function(){
+          var prepToLeave = $('#prep-to-leave');
+          var safetyPlan = $('#safety-plan');
 
-      prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-      safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-      console.log(prepToLeave);
+          prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
+          safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
+        }, 10);
+      }
+
+      if ($location.$$absUrl.slice(17) == '#/getHelp'){
+        var prepToLeave = $('#prep-to-leave');
+        var safetyPlan = $('#safety-plan');
+
+        prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
+        safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
+      }
 
       // Save events info into array
       main.events = res.data.data.events;

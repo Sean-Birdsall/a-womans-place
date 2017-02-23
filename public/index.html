@@ -49,7 +49,7 @@
         <h4 class="crisis">970-356-4226 | 866-356-4226 <span class="glyphicon glyphicon-earphone"></span></h4>
       </div>
     </div>
-    <nav class="orange">
+    <nav class="orange" style="border-radius: 5px 5px 0 0">
       <a href="" class="hamburger-menu nav-link" ng-click="main.activeNav = 6; main.menuActive = !main.menuActive" ng-class="{'nav-active': main.activeNav === 6}">Menu<span class="glyphicon glyphicon-menu-hamburger"></span></a>
       <div ng-if="main.menuActive" ng-mouseleave="main.menuActive = !main.menuActive" sytle="position: absolute;">
         <a href="#/" class="small-nav-link"><div>Home</div></a>
@@ -61,7 +61,7 @@
       <ul class="nav-list">
         <a class="nav-link myFont" href="#/" ng-click="main.activeNav = 1" ng-class="{'nav-active': main.activeNav === 1}"><li>Home</li>
         </a><a class="nav-link myFont" href="#/about" ng-click="main.activeNav = 2"  ng-class="{'nav-active': main.activeNav === 2}"><li>About Us</li>
-        </a><a class="nav-link myFont" href="#/getHelp" ng-click="main.activeNav = 3"  ng-class="{'nav-active': main.activeNav === 3}"><li>Get Help</li>
+        </a><a class="nav-link myFont" href="#/getHelp" ng-click="main.activeNav = 3; main.getData();"  ng-class="{'nav-active': main.activeNav === 3}"><li>Get Help</li>
         </a><a class="nav-link myFont" href="#/dv" ng-click="main.activeNav = 4"  ng-class="{'nav-active': main.activeNav === 4}"><li>Learn More</li>
         </a><a class="nav-link myFont" href="#/giveHelp" ng-click="main.activeNav = 5"  ng-class="{'nav-active': main.activeNav === 5}"><li>Get Involved</li>
         </a>
@@ -69,7 +69,7 @@
     </nav>
 
     <ng-view>
-  
+
     </ng-view>
 
     <div class="section myFont" style="padding: 10px 10%">
@@ -79,8 +79,7 @@ domestic violence, call:</h4>
         Toll Free: 866-356-4226<br>
         Business: 970-351-0476<br>
         Email: info@awpdv.org</h5>
-    </div>
-    <div class="section">
+    </div><div class="section">
       <img src="resources/handi.png" alt="" class="foot-img">
       <img src="resources/united-way.jpg" alt="" class="foot-img">
       <img src="resources/sehabla.gif" alt="" class="foot-img">
