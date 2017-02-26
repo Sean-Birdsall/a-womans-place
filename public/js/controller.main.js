@@ -32,7 +32,6 @@ function mainController($http, $location) {
       main.activeNav = 1;
   }
 
-
   // Value used to dynamically set height of YouTube video and adjacent divs on home page
   main.ytHeight = $(window).height() / 3;
 
@@ -40,36 +39,62 @@ function mainController($http, $location) {
   $http.get('/cmsdata')
     .then(function(res){
 
+
+
       // Main object of CMS response
       main.awp = res.data.data;
+
+            console.log(main.awp.obstacles);
+
+      /////////////////////// HOME PAGE DATA //////////////////////////////////
       // Data used in bootstrap carousel
       main.image_carousel = res.data.data.image_carousel;
-
       main.homeSections = res.data.data.home_sections;
+
+      ////////////////////// ABOUT PAGE DATA //////////////////////////////////
       main.aboutSections = res.data.data.about_page_sections;
-      // In order to split the 'services section' into two columns on the page
-      //we need to split it evenly into two different arrays
-      main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
-      main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-      // Images on the about page
       main.aboutImages = res.data.data.about_page_images;
 
-      main.getData = function(){
+      /////////////////////// GET HELP PAGE DATA //////////////////////////////
+      // In order to split the 'services section' into two columns on the page
+      // we need to split it evenly into two different arrays
+      main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
+      main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
+
+      main.getHelpData = function(){
         setTimeout(function(){
           var prepToLeave = $('#prep-to-leave');
           var safetyPlan = $('#safety-plan');
+          var onlinePrivacy = $('#online-privacy');
+          //var communityRes = $('#community-res');
 
           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-        }, 10);
+          onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
+          //communityRes[0].innerHTML = main.awp.community_resources[0].description;
+        }, 500);
       }
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
-        var prepToLeave = $('#prep-to-leave');
-        var safetyPlan = $('#safety-plan');
+        main.getHelpData();
+      }
 
-        prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-        safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
+      /////////////////////// LEARN MORE PAGE DATA /////////////////////////////
+
+      main.dvData = function() {
+        setTimeout(function(){
+          var whatIsDV = $('#what-is-dv');
+          var warningSigns = $('#warning-signs');
+          //var obstacles = $('#obstacles');
+
+          //obstacles[0].innerHTML = main.awp.obstacles[0].description;
+          warningSigns[0].innerHTML = main.awp.warning_signs[0].description;
+          whatIsDV[0].innerHTML = main.awp.what_is_dv[0].description;
+        }, 500);
+      }
+      // Checks to see if this is starting page
+      if ($location.$$absUrl.slice(17) == '#/dv'){
+        main.dvData();
       }
 
       // Save events info into array
@@ -110,6 +135,8 @@ function mainController($http, $location) {
         console.error(err);
       }
     })
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
