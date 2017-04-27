@@ -43,8 +43,9 @@ function mainController($http, $location) {
 
       // Main object of CMS response
       main.awp = res.data.data;
+      console.log(main.awp);
 
-            console.log(main.awp.obstacles);
+      // console.log(main.awp.obstacles);
 
       /////////////////////// HOME PAGE DATA //////////////////////////////////
       // Data used in bootstrap carousel
@@ -66,12 +67,12 @@ function mainController($http, $location) {
           var prepToLeave = $('#prep-to-leave');
           var safetyPlan = $('#safety-plan');
           var onlinePrivacy = $('#online-privacy');
-          //var communityRes = $('#community-res');
+          // var communityRes = $('#community-res');
 
           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
           onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-          //communityRes[0].innerHTML = main.awp.community_resources[0].description;
+          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
         }, 500);
       }
 
