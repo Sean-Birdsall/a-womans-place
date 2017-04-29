@@ -204,7 +204,7 @@ body {
 .nav-link {
   font-size: 135%;
   display: inline-block;
-  width: 20%;
+  /*width: 16.67%;*/
   box-sizing: border-box;
   padding: 15px;
   text-decoration: none;
