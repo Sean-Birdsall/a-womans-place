@@ -178,6 +178,10 @@ body {
   text-align: left;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .home-head {
   color: white;
   background-color: #954A87;
