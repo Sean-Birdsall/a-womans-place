@@ -258,7 +258,7 @@ body {
   box-sizing: border-box;
   padding: 10px 20px;
   display: inline-block;
-  width: 50%;
+  width: 100%;
   vertical-align: top;
 }
 
@@ -374,6 +374,12 @@ body {
 .about-sec-one {
   vertical-align: middle;
   padding: 15px
+}
+
+.donate-section{
+  position: relative;
+  left: 50vw;
+  transform: translate(-50%);
 }
 
 @media all and (max-width: 1110px) {
