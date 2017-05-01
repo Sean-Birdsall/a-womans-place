@@ -361,6 +361,10 @@ body {
   padding-bottom: 15px;
 }
 
+.padding-bottom {
+  padding-bottom: 15px;
+}
+
 .well {
   border-radius: 5px;
 }
