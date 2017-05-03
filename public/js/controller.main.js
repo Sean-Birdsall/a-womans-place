@@ -74,25 +74,24 @@ function mainController($http, $location, $sce) {
       // we need to split it evenly into two different arrays
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-<<<<<<< HEAD
-
-      //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
-      main.getHelpData = function(){
-        setTimeout(function(){
-          var prepToLeave = $('#prep-to-leave');
-          var safetyPlan = $('#safety-plan');
-          var onlinePrivacy = $('#online-privacy');
-          // var communityRes = $('#community-res');
-
-          // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
-
-          prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-          safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-          onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-        }, 1000);
-      }
-=======
+// <<<<<<< HEAD
+//
+//       //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
+//       main.getHelpData = function(){
+//         setTimeout(function(){
+//           var prepToLeave = $('#prep-to-leave');
+//           var safetyPlan = $('#safety-plan');
+//           var onlinePrivacy = $('#online-privacy');
+//           // var communityRes = $('#community-res');
+//
+//           // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
+//
+//           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
+//           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
+//           onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
+//           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
+//         }, 1000);
+//       }
 
 // I do not understand why this function was chosen to display the relevant data...
       // main.getHelpData = function(){
@@ -104,9 +103,9 @@ function mainController($http, $location, $sce) {
       //
           // prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-      //   }, 500);
-      // }
->>>>>>> 276dac98be918d60340e0f60d2b838b0748ff12a
+//       //   }, 500);
+//       // }
+// >>>>>>> 276dac98be918d60340e0f60d2b838b0748ff12a
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
         main.getHelpData();
@@ -248,8 +247,7 @@ function mainController($http, $location, $sce) {
     main.formPage--;
   }
 
-<<<<<<< HEAD
-=======
+
 // Data for the resources links. Just replace resource names and urls with your own data. Cut and paste last object if you need more reqources. Delete objects if you need less.
   main.resources = [{
     name: "resource 1",
@@ -264,6 +262,5 @@ function mainController($http, $location, $sce) {
     name: "resource 4",
     url: "https://www.google.com.au"
   }]
->>>>>>> 276dac98be918d60340e0f60d2b838b0748ff12a
 
 }
