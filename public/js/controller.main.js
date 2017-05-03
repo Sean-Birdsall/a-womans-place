@@ -43,7 +43,7 @@ function mainController($http, $location) {
 
       // Main object of CMS response
       main.awp = res.data.data;
-
+            // console.log(main.awp);
             console.log(main.awp.obstacles);
 
       /////////////////////// HOME PAGE DATA //////////////////////////////////
@@ -60,19 +60,22 @@ function mainController($http, $location) {
       // we need to split it evenly into two different arrays
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-
+      
+      //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
       main.getHelpData = function(){
         setTimeout(function(){
           var prepToLeave = $('#prep-to-leave');
           var safetyPlan = $('#safety-plan');
           var onlinePrivacy = $('#online-privacy');
-          //var communityRes = $('#community-res');
+          // var communityRes = $('#community-res');
+
+          // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
 
           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
           onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-          //communityRes[0].innerHTML = main.awp.community_resources[0].description;
-        }, 500);
+          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
+        }, 1000);
       }
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
@@ -214,5 +217,6 @@ function mainController($http, $location) {
   main.prevBtn = function(){
     main.formPage--;
   }
+
 
 }

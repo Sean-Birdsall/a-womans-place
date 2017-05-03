@@ -1,12 +1,12 @@
 <div style="position: relative">
-  <img src="../resources/back1.jpg" alt="" class="back">
+  <img src="{{main.awp.get_help_page_image}}" alt="" class="back">
 <div class="myFont serve-head serve-head-purple text-white">
   <h3 class="font text-white text-shadow">
-   You are <span class="text-blue">strong</span>, <span class="text-orange">capable</span>, and now have the resources to break free of control.
+   {{ main.awp.get_help_page_box }}
  </h3>
 </div>
 </div>
-<h2 class="purple font text-white home-head">Take Action</h2>
+<h2 class="purple font text-white home-head">{{ main.awp.get_help_page_banner }}</h2>
 
 <div class="section section-get-help blue text-white">
   <h2 class="font">{{ main.awp.creating_a_safety_plan[0].heading}}</h2>
@@ -38,9 +38,11 @@
 </div>
 
 <div class="section section-get-help blue text-white">
-  <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
-  <div id="online-privacy" class="myFont text-left"></div>
+    <h2 class="font">{{ main.awp.protecting_online_privacy[0].heading}}</h2>
+    <div id="online-privacy" class="myFont text-left"></div>
+    <div id="cyberstalking"></div>
 </div>
+
 
 <div class="section section-get-help orange">
   <h2 class="font">{{ main.awp.community_resources[0].heading }}</h2>
