@@ -1,9 +1,9 @@
 angular.module('awp')
   .controller('mainController', mainController);
 
-mainController.$inject = ['$http', '$location'];
+mainController.$inject = ['$http', '$location','$sce'];
 
-function mainController($http, $location) {
+function mainController($http, $location, $sce) {
   var main = this;
 
   // Figures out which page user is on when they enter the site and selects the
@@ -42,9 +42,18 @@ function mainController($http, $location) {
 
 
       // Main object of CMS response
-      main.awp = res.data.data;
+  main.awp = res.data.data;
+    console.log(main.awp);
 
-            console.log(main.awp.obstacles);
+    // the butter-cms response sends sends many description values as HTML text.
+    // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
+    // This is how (one way?) to make the HTML in those discriptions acceptable to display correctly in angularJS.
+    // They have to be set as safe...
+  main.communityResources = $sce.trustAsHtml(main.awp.community_resources[0].description);
+  main.prepToLeave        = $sce.trustAsHtml(main.awp.preparing_to_leave[0].description);
+  main.safetyPlan         = $sce.trustAsHtml(main.awp.creating_a_safety_plan[0].description);
+  main.onlinePrivacy      = $sce.trustAsHtml(main.awp.protecting_online_privacy[0].description);
+      // console.log(main.awp.obstacles);
 
       /////////////////////// HOME PAGE DATA //////////////////////////////////
       // Data used in bootstrap carousel
@@ -61,19 +70,18 @@ function mainController($http, $location) {
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
 
-      main.getHelpData = function(){
-        setTimeout(function(){
-          var prepToLeave = $('#prep-to-leave');
-          var safetyPlan = $('#safety-plan');
-          var onlinePrivacy = $('#online-privacy');
-          //var communityRes = $('#community-res');
-
-          prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-          safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-          onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-          //communityRes[0].innerHTML = main.awp.community_resources[0].description;
-        }, 500);
-      }
+// I do not understand why this function was chosen to display the relevant data...
+      // main.getHelpData = function(){
+      //   setTimeout(function(){
+      //     var prepToLeave = $('#prep-to-leave');
+      //     var safetyPlan = $('#safety-plan');
+      //     var onlinePrivacy = $('#online-privacy');
+      //     var communityRes = $('#community-res');
+      //
+          // prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
+          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
+      //   }, 500);
+      // }
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
         main.getHelpData();

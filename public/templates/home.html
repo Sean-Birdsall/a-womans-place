@@ -13,8 +13,9 @@
       <div class="carousel-caption text-left">
         <h3 class="font">{{ main.image_carousel[0].heading }}</h3>
         <p class="myFont">{{ main.image_carousel[0].paragraph }}</p>
-        <a href="#/getHelp" ng-click="main.getHelpData()"><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
+        <a href="#/getHelp" ><button class="btn btn-success car-button font text-shadow">Get Help</button></a>
       </div>
+      <!-- took this out of <a> in line 16 ng-click="main.getHelpData()" -->
     </div>
     <div class="item">
       <img src="{{ main.image_carousel[1].image }}" class="carousel-img">

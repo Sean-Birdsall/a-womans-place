@@ -14,7 +14,7 @@ module.exports = {
   getContent: (req, res) => {
     butter.content.retrieve(contentFields)
       .then(function(resp) {
-        //console.log(resp.data)
+        // console.log(resp.data)
         res.send(resp.data);
       }).catch(function(resp) {
         console.log(resp)
