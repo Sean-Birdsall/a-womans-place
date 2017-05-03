@@ -1,10 +1,12 @@
 angular.module('awp')
   .controller('mainController', mainController);
 
-mainController.$inject = ['$http', '$location','$sce'];
+
+mainController.$inject = ['$http', '$location', '$sce'];
 
 function mainController($http, $location, $sce) {
   var main = this;
+  main.$sce = $sce;
 
   // Figures out which page user is on when they enter the site and selects the
   // correct navigation link
@@ -23,11 +25,14 @@ function mainController($http, $location, $sce) {
       main.activeNav = 4;
       break;
     case '#/giveHelp':
+      main.activeNav = 5;
+      break;
+    case '#/resources':
+      // main.activeNav = 6;
+      // break;
     case '#/volunteer':
     case '#/volunteerApp':
     case '#/wishlist':
-      main.activeNav = 5;
-      break;
     default:
       main.activeNav = 1;
   }
@@ -222,5 +227,20 @@ function mainController($http, $location, $sce) {
   main.prevBtn = function(){
     main.formPage--;
   }
+
+// Data for the resources links. Just replace resource names and urls with your own data. Cut and paste last object if you need more reqources. Delete objects if you need less.
+  main.resources = [{
+    name: "resource 1",
+    url: "https://www.google.com"
+  },{
+    name: "resource 2",
+    url: "https://www.google.ca"
+  },{
+    name: "resource 3",
+    url: "https://www.google.com.mx"
+  },{
+    name: "resource 4",
+    url: "https://www.google.com.au"
+  }]
 
 }
