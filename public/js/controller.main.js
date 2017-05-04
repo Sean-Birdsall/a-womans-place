@@ -74,38 +74,17 @@ function mainController($http, $location, $sce) {
       // we need to split it evenly into two different arrays
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-// <<<<<<< HEAD
-//
-//       //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
-//       main.getHelpData = function(){
-//         setTimeout(function(){
-//           var prepToLeave = $('#prep-to-leave');
-//           var safetyPlan = $('#safety-plan');
-//           var onlinePrivacy = $('#online-privacy');
-//           // var communityRes = $('#community-res');
-//
-//           // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
-//
-//           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-//           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-//           onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-//           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-//         }, 1000);
-//       }
 
-// I do not understand why this function was chosen to display the relevant data...
-      // main.getHelpData = function(){
-      //   setTimeout(function(){
-      //     var prepToLeave = $('#prep-to-leave');
-      //     var safetyPlan = $('#safety-plan');
-      //     var onlinePrivacy = $('#online-privacy');
-      //     var communityRes = $('#community-res');
-      //
-          // prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-//       //   }, 500);
-//       // }
-// >>>>>>> 276dac98be918d60340e0f60d2b838b0748ff12a
+
+
+      /////////////////////// RESOURCES PAGE DATA //////////////////////////////
+
+
+      main.resources = res.data.data.resources;
+
+
+
+
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
         main.getHelpData();
@@ -249,18 +228,23 @@ function mainController($http, $location, $sce) {
 
 
 // Data for the resources links. Just replace resource names and urls with your own data. Cut and paste last object if you need more reqources. Delete objects if you need less.
-  main.resources = [{
-    name: "resource 1",
-    url: "https://www.google.com"
-  },{
-    name: "resource 2",
-    url: "https://www.google.ca"
-  },{
-    name: "resource 3",
-    url: "https://www.google.com.mx"
-  },{
-    name: "resource 4",
-    url: "https://www.google.com.au"
-  }]
+
+  // main.resources = main.awp.resources;
+
+  // main.resources = [{
+  //   name: "resource 1",
+  //   url: "https://www.google.com"
+  // },{
+  //   name: "resource 2",
+  //   url: "https://www.google.ca"
+  // },{
+  //   name: "resource 3",
+  //   url: "https://www.google.com.mx"
+  // },{
+  //   name: "resource 4",
+  //   url: "https://www.google.com.au"
+  // }]
+
+
 
 }
