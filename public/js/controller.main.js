@@ -48,7 +48,7 @@ function mainController($http, $location, $sce) {
 
       // Main object of CMS response
   main.awp = res.data.data;
-    console.log(main.awp);
+    // console.log(main.awp);
 
     // the butter-cms response sends sends many description values as HTML text.
     // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
@@ -74,8 +74,8 @@ function mainController($http, $location, $sce) {
       // we need to split it evenly into two different arrays
       main.rightServices = res.data.data.services.slice(Math.ceil(res.data.data.services.length/2));
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
-// <<<<<<< HEAD
-//
+
+
 //       //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
 //       main.getHelpData = function(){
 //         setTimeout(function(){
@@ -103,9 +103,9 @@ function mainController($http, $location, $sce) {
       //
           // prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-//       //   }, 500);
-//       // }
-// >>>>>>> 276dac98be918d60340e0f60d2b838b0748ff12a
+//          }, 500);
+//        }
+
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
         main.getHelpData();
@@ -178,6 +178,7 @@ function mainController($http, $location, $sce) {
   // Blank object to store volunteer information for application
   main.volData = {};
 
+
   // Dummy Form Data
   // main.volData = { "workExp":"Seven years in the Navy",
   //                   "volExp":"Animal shelter volunteer work",
@@ -233,11 +234,7 @@ function mainController($http, $location, $sce) {
 
   main.languages = ['English', 'Spanish', 'Other...'];
 
-  main.formStates = ["CO","AL","AK","AZ","AR","CA","CT","DE","DC","FL","GA","HI",
-                     "ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN",
-                     "MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH",
-                     "OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA",
-                     "WV","WI","WY"];
+  main.formStates = ["CO","AL","AK","AZ","AR","CA","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
 
   main.nextBtn = function(){
         main.formPage++;
@@ -262,5 +259,9 @@ function mainController($http, $location, $sce) {
     name: "resource 4",
     url: "https://www.google.com.au"
   }]
+
+  main.submitVolApp = function () {
+    console.log(main.volData);
+  }
 
 }
