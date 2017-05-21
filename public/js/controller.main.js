@@ -76,6 +76,7 @@ function mainController($http, $location, $sce) {
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
 
 
+
 //       //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
 //       main.getHelpData = function(){
 //         setTimeout(function(){
@@ -105,6 +106,12 @@ function mainController($http, $location, $sce) {
           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
 //          }, 500);
 //        }
+
+      /////////////////////// RESOURCES PAGE DATA //////////////////////////////
+
+
+      main.resources = res.data.data.resources;
+
 
 
       if ($location.$$absUrl.slice(17) == '#/getHelp'){
@@ -246,19 +253,24 @@ function mainController($http, $location, $sce) {
 
 
 // Data for the resources links. Just replace resource names and urls with your own data. Cut and paste last object if you need more reqources. Delete objects if you need less.
-  main.resources = [{
-    name: "resource 1",
-    url: "https://www.google.com"
-  },{
-    name: "resource 2",
-    url: "https://www.google.ca"
-  },{
-    name: "resource 3",
-    url: "https://www.google.com.mx"
-  },{
-    name: "resource 4",
-    url: "https://www.google.com.au"
-  }]
+
+  // main.resources = main.awp.resources;
+
+  // main.resources = [{
+  //   name: "resource 1",
+  //   url: "https://www.google.com"
+  // },{
+  //   name: "resource 2",
+  //   url: "https://www.google.ca"
+  // },{
+  //   name: "resource 3",
+  //   url: "https://www.google.com.mx"
+  // },{
+  //   name: "resource 4",
+  //   url: "https://www.google.com.au"
+  // }]
+
+
 
   main.submitVolApp = function () {
     console.log(main.volData);

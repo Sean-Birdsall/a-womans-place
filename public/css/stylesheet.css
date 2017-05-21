@@ -112,6 +112,12 @@ body {
   text-align: center;
 }
 
+.centerInfo {
+  margin-left: 10%;
+  width: 80%;
+  padding: 1%;
+}
+
 .crisis {
   margin: 5px;
 }
@@ -219,6 +225,12 @@ body {
 
 .hamburger-menu {
   display: none;
+}
+
+.lineBreak {
+  background-color: #954A87;
+  height: 3px;
+  border-radius: 12px;
 }
 
 .nav-link:hover {
