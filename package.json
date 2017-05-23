@@ -4,7 +4,8 @@
   "description": "Site re-design for Woman's Place",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\"",
     "start": "node server.js"
   },
   "author": "Sean Birdsall",
