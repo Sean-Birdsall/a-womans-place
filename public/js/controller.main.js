@@ -76,37 +76,6 @@ function mainController($http, $location, $sce) {
       main.leftServices = res.data.data.services.splice(0, Math.ceil(res.data.data.services.length/2));
 
 
-
-//       //======================FUNCTION MAKE CALL FOR GET HELP DATA===============
-//       main.getHelpData = function(){
-//         setTimeout(function(){
-//           var prepToLeave = $('#prep-to-leave');
-//           var safetyPlan = $('#safety-plan');
-//           var onlinePrivacy = $('#online-privacy');
-//           // var communityRes = $('#community-res');
-//
-//           // console.log("GET HELP: ", prepToLeave, safetyPlan, onlinePrivacy);
-//
-//           prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-//           safetyPlan[0].innerHTML = main.awp.creating_a_safety_plan[0].description;
-//           onlinePrivacy[0].innerHTML = main.awp.protecting_online_privacy[0].description;
-//           // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-//         }, 1000);
-//       }
-
-// I do not understand why this function was chosen to display the relevant data...
-      // main.getHelpData = function(){
-      //   setTimeout(function(){
-      //     var prepToLeave = $('#prep-to-leave');
-      //     var safetyPlan = $('#safety-plan');
-      //     var onlinePrivacy = $('#online-privacy');
-      //     var communityRes = $('#community-res');
-      //
-          // prepToLeave[0].innerHTML = main.awp.preparing_to_leave[0].description;
-          // communityRes[0].innerHTML = main.awp.community_resources[0].description;
-//          }, 500);
-//        }
-
       /////////////////////// RESOURCES PAGE DATA //////////////////////////////
 
 
@@ -185,52 +154,6 @@ function mainController($http, $location, $sce) {
   // Blank object to store volunteer information for application
   main.volData = {};
 
-
-  // Dummy Form Data
-  // main.volData = { "workExp":"Seven years in the Navy",
-  //                   "volExp":"Animal shelter volunteer work",
-  //                   "references":[{
-  //                     "name":"Donald Trump",
-  //                     "relationship":"President",
-  //                     "phone":"555-555-5555"
-  //                     },{
-  //                     "name":"Obama",
-  //                     "relationship":"Former President",
-  //                     "phone":"555-555-2342"
-  //                   }],
-  //                   "length":"Ongoing",
-  //                   "hours":"10",
-  //                   "why":"I want to help a cause I believe in",
-  //                   "like":"The rewarding feeling of helping people",
-  //                   "how":"RefactorU career services",
-  //                   "first":"Sean",
-  //                   "last":"Birdsall",
-  //                   "street":"1216 Marina Ct.",
-  //                   "city":"Lewisivlle",
-  //                   "state":"TX",
-  //                   "zip":75067,
-  //                   "phone":"972-510-9534",
-  //                   "email":"sbirdsall0312@gmail.com",
-  //                   "highestEd":"Some College",
-  //                   "major":"N/A",
-  //                   "languages":['English'],
-  //                   "times":['Afternoons'],
-  //                   "contactMethods":['Phone','Email'],
-  //                   "eduExpected":null,
-  //                   "days":['Saturday','Sunday'],
-  //                   "volTimes":['Mornings','Afternoons'],
-  //                   "crime":"No",
-  //                   "questions":"None",
-  //                   "restrictions":"None",
-  //                   "emc":{
-  //                     "name":"Debbie Birdsall",
-  //                     "relationship":"Mother",
-  //                     "street":"1216 Marina Ct.",
-  //                     "city":"Lewisivlle",
-  //                     "state":"TX","zip":75067,
-  //                     "phone":"214-641-8295"},
-  //                     };
-
   main.formPage = 1;
 
   main.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -251,29 +174,13 @@ function mainController($http, $location, $sce) {
     main.formPage--;
   }
 
-
-// Data for the resources links. Just replace resource names and urls with your own data. Cut and paste last object if you need more reqources. Delete objects if you need less.
-
-  // main.resources = main.awp.resources;
-
-  // main.resources = [{
-  //   name: "resource 1",
-  //   url: "https://www.google.com"
-  // },{
-  //   name: "resource 2",
-  //   url: "https://www.google.ca"
-  // },{
-  //   name: "resource 3",
-  //   url: "https://www.google.com.mx"
-  // },{
-  //   name: "resource 4",
-  //   url: "https://www.google.com.au"
-  // }]
-
-
-
   main.submitVolApp = function () {
-    console.log(main.volData);
-  }
-
+      var volunteerData = main.volData
+      console.log(volunteerData)
+      $http.post('/volunteerSubmit', volunteerData)
+           .then (function success(response) {
+           console.log("successful post")
+         })
+         .catch(function(err){console.log("Update via put failed, caught error: ",err)})
+        }
 }
