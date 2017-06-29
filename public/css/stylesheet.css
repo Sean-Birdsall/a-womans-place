@@ -513,4 +513,23 @@ body {
   .section {
     width: 100%;
   }
+
+}
+
+#full-board {
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+#left-directors {
+  width: 300px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+#right-directors {
+  float:right;
+  width: 300px;
+  border: 1px solid green;
+
 }
