@@ -517,22 +517,24 @@ body {
 }
 
 #board-directors {
-  border: 1px solid black;
   overflow: hidden;
 }
 
 #left-directors {
-  width: 300px;
-  border: 1px solid red;
+  width: 500px;
   overflow: hidden;
   padding: 10px;
-  margin-left: 225px;
+  margin-left: 70px;
 }
 
 #right-directors {
   float:right;
-  width: 300px;
-  border: 1px solid green;
+  width: 500px;
   padding: 20px;
-  margin-right: 225px;
+  padding-top: 10px;
+  margin-right: 70px;
+}
+
+#annual-report {
+  margin-top: 20px;
 }
