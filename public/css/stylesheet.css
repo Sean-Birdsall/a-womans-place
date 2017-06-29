@@ -516,7 +516,7 @@ body {
 
 }
 
-#full-board {
+#board-directors {
   border: 1px solid black;
   overflow: hidden;
 }
@@ -525,11 +525,14 @@ body {
   width: 300px;
   border: 1px solid red;
   overflow: hidden;
+  padding: 10px;
+  margin-left: 225px;
 }
 
 #right-directors {
   float:right;
   width: 300px;
   border: 1px solid green;
-
+  padding: 20px;
+  margin-right: 225px;
 }
