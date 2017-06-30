@@ -521,7 +521,7 @@ body {
 }
 
 #left-directors {
-  width: 500px;
+  max-width: 500px;
   overflow: hidden;
   padding: 10px;
   margin-left: 70px;
@@ -529,7 +529,7 @@ body {
 
 #right-directors {
   float:right;
-  width: 500px;
+  max-width: 500px;
   padding: 20px;
   padding-top: 10px;
   margin-right: 70px;
