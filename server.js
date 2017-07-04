@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var butter = require('./butter-cms.controller');
 var request = require('request');
-var PORT = process.env.PORT || 80;
+var PORT = process.env.PORT || 8080;
 var app = express();
 
 app.use(express.static('public'));
@@ -18,3 +18,5 @@ app.listen(PORT, (err) =>{
     console.log(`Server up and running on port: ${PORT}`);
   }
 });
+
+module.exports.app = app;
