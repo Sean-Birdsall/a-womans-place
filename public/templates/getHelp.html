@@ -59,10 +59,10 @@
       <h3 class="font text-left">
         <a ng-href="{{main.$sce.trustAsResourceUrl(resource.url)}}">{{resource.name}}</h3></a>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4" id="middle-resource">
         <h4><a ng-href="{{main.$sce.trustAsResourceUrl(resource.url)}}">{{resource.url}}</a></h4>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4" id="right-resource">
         <h4><a ng-href="tel:+{{resource.contact}}{{main.$sce.trustAsResourceUrl(resource.contact)}}">{{resource.contact}}</a></h4>
       </div>
     </div>

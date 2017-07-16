@@ -291,9 +291,16 @@ body {
 }
 
 .section-resources {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
+#middle-resource {
+  padding-top: 15px;
+}
+
+#right-resource {
+  padding-top: 15px;
+}
 
 .section-third {
   box-sizing: border-box;
