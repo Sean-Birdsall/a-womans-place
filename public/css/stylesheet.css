@@ -286,7 +286,8 @@ body {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 10px 7%;
+  padding: 1px 7%;
+  border-bottom: 3px solid #954A87;
 }
 
 
