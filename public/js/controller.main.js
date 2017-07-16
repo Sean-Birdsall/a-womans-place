@@ -54,7 +54,6 @@ function mainController($http, $location, $sce) {
     // the butter-cms gives the option of having a text area set as a WYSIWYG editor, which formats all in it as HTML.
     // This is how (one way?) to make the HTML in those discriptions acceptable to display correctly in angularJS.
     // They have to be set as safe...
-  main.communityResources = $sce.trustAsHtml(main.awp.community_resources[0].description);
   main.prepToLeave        = $sce.trustAsHtml(main.awp.preparing_to_leave[0].description);
   main.safetyPlan         = $sce.trustAsHtml(main.awp.creating_a_safety_plan[0].description);
   main.onlinePrivacy      = $sce.trustAsHtml(main.awp.protecting_online_privacy[0].description);

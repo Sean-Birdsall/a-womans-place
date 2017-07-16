@@ -286,10 +286,21 @@ body {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 10px 7%;
+  padding: 1px 7%;
+  border-bottom: 3px solid #954A87;
 }
 
+.section-resources {
+  margin-top: 5px;
+}
 
+#middle-resource {
+  padding-top: 15px;
+}
+
+#right-resource {
+  padding-top: 15px;
+}
 
 .section-third {
   box-sizing: border-box;
